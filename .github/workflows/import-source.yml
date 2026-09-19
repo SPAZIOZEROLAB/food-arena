@@ -1,0 +1,76 @@
+name: Import verified Food Arena source
+on: workflow_dispatch
+permissions:
+  contents: write
+concurrency:
+  group: import-food-arena-source
+  cancel-in-progress: false
+jobs:
+  import:
+    if: github.repository == 'SPAZIOZEROLAB/food-arena' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+      - name: Verify, extract all 136 files, commit and push
+        shell: python
+        run: |
+          import hashlib, pathlib, stat, subprocess, zipfile
+
+          def members(z, root):
+              files = z.infolist()
+              if len(files) != 136 or any(f.is_dir() for f in files):
+                  raise ValueError('Expected exactly 136 regular files')
+              names = set()
+              for f in files:
+                  name = f.filename
+                  p = pathlib.PurePosixPath(name)
+                  if (not name or '\\' in name or ':' in name or p.is_absolute()
+                      or name != p.as_posix() or any(x in ('', '.', '..') for x in name.split('/'))
+                      or any(x.lower() in ('.git', '.github') for x in p.parts)
+                      or any(x.lower().startswith('.env') and x != '.env.example' for x in p.parts)
+                      or stat.S_IFMT(f.external_attr >> 16) not in (0, stat.S_IFREG)
+                      or name.lower() in names):
+                      raise ValueError('Unsafe or duplicate archive path')
+                  names.add(name.lower())
+                  target = root.joinpath(*p.parts)
+                  if not target.resolve().is_relative_to(root):
+                      raise ValueError('Path escapes checkout')
+                  while target != root:
+                      if target.is_symlink():
+                          raise ValueError('Existing symlink in destination')
+                      target = target.parent
+              for f in files:
+                  if any(str(p).lower() in names for p in pathlib.PurePosixPath(f.filename).parents):
+                      raise ValueError('File/directory path collision')
+              if z.testzip() is not None:
+                  raise ValueError('ZIP integrity check failed')
+              return files
+
+          root = pathlib.Path.cwd().resolve()
+          archive = root / 'food-arena-source.zip'
+          expected = '02fa5d47155734835ee42a8a2c3b1b78d411bcc26ca5a30786b2fb26b0813e00'
+          if hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
+              raise ValueError('Source archive SHA-256 mismatch')
+          with zipfile.ZipFile(archive) as z:
+              files = members(z, root)
+              for f in files:
+                  target = root / f.filename
+                  target.parent.mkdir(parents=True, exist_ok=True)
+                  target.write_bytes(z.read(f))
+          def git(*args):
+              return subprocess.run(['git', *args], check=True)
+          git('--literal-pathspecs', 'add', '--force', '--', *[f.filename for f in files])
+          unchanged = subprocess.run(['git', 'diff', '--cached', '--quiet']).returncode
+          if unchanged == 0:
+              print('All 136 verified source files are already committed.')
+          elif unchanged == 1:
+              git('config', 'user.name', 'github-actions[bot]')
+              git('config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
+              git('-c', 'core.hooksPath=/dev/null', '-c', 'commit.gpgsign=false', 'commit', '-m', 'Import verified Food Arena source')
+              git('push', 'origin', 'HEAD:main')
+              print('Imported and pushed all 136 verified source files.')
+          else:
+              raise RuntimeError('git diff failed')
