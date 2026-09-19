@@ -2,9 +2,19 @@
 
 **Tu lanci il budget. I locali propongono il pranzo.**
 
-«Ho 10 € totali, sono in Viale Pindaro e ritiro entro mezz’ora». Il cliente pubblica la richiesta. Il locale risponde con un piatto, quantità, prezzo totale e orario precisi. La scelta riserva una commissione del locale nel contratto Avalanche. Il ritiro attestato dal gestore la assegna al beneficiario del mandato.
+«Ho 10 € totali, sono in Viale Pindaro e ritiro entro mezz’ora». Il cliente pubblica la richiesta e confronta le offerte compatibili dei locali aderenti. Ogni proposta indica piatto, quantità, prezzo totale e tempo di preparazione. La richiesta resta aperta fino alla scelta o alla scadenza. Il cliente sceglie liberamente e può anche non acquistare.
+
+Il gestore decide menu, prezzi e quantità. Può proporre personalmente oppure autorizzare l’AI a rispondere entro quei limiti. Alla scelta del cliente, Avalanche riserva la commissione dal budget del locale. Quando il gestore conferma il ritiro con una firma, il contratto accredita il servizio una sola volta.
 
 [Apri l’app](https://food-arena.eldamarchigiano.chatgpt.site) · [Mandato e prove Fuji](https://food-arena.eldamarchigiano.chatgpt.site/mandato) · [Demo guidata](docs/DEMO_WALKTHROUGH.md) · [Pitch e primo mercato](docs/PITCH_GTM.md)
+
+**Presentazione corrente:** [PDF, 8 slide](docs/Food-Arena-pitch-v4.pdf) e [PowerPoint modificabile](docs/Food-Arena-pitch-v4.pptx). [Guida per raccontare il progetto](docs/GUIDA_PRESENTAZIONE.md). Le presentazioni v2 e v3 restano come archivio e contengono proposte commerciali precedenti.
+
+## Chi paga il servizio
+
+Il modello commerciale proposto prevede cliente senza sovrapprezzo e locale senza canone, costo di ingresso o costo per l’invio di una proposta. Il locale pagherebbe **0,70 € — settanta centesimi — per ogni ritiro completato**. È una tariffa da validare con i gestori, non un addebito attivo né una prova di redditività.
+
+Esempio commerciale: il cliente paga 10 € al locale per il pranzo. Il locale sostiene separatamente 0,70 € per Food Arena. Il budget custodito nel contratto serve a finanziare le commissioni del locale; è distinto dal denaro con cui il cliente paga il cibo. La demo usa soltanto gettoni di prova finanziati dallo sponsor. Non incassa euro e non converte test AVAX nella tariffa proposta.
 
 ## Due modi per provare
 
@@ -30,7 +40,7 @@ Il relayer paga il gas e inoltra autorizzazioni firmate. Non possiede la chiave 
 
 L’accettazione applicativa attende lo stato del contratto: senza riserva confermata non diventa un ritiro confermato. Resta una scelta architetturale da validare con esercenti reali, non una prova di domanda commerciale. La blockchain controlla custodia e autorizzazioni; il ritiro fisico resta una dichiarazione del gestore. Nessun codice di ritiro o dato personale compare in chiaro onchain.
 
-**Nessun fondo reale. Il pasto si paga al locale, senza sovrapprezzo al cliente.** I token Fuji non hanno una conversione nella tariffa ipotetica di 0,30 € per ritiro.
+**Nessun fondo reale. Il pasto si paga al locale, senza sovrapprezzo al cliente.** I token Fuji non hanno una conversione nella tariffa ipotetica di 0,70 € per ritiro. Il finanziamento e il recupero del budget con denaro reale richiedono un percorso commerciale ancora da realizzare.
 
 ## Prove e limiti
 
@@ -50,7 +60,7 @@ Il contratto e l’ABI sono nel repository. `app/budget-config.ts` definisce ret
 
 ## Pilota e licenza
 
-Proposta: **due locali, dieci studenti e cinque giorni di pranzo in Viale Pindaro**. Nessun partner aderente o ricavo è dichiarato. Prezzo da verificare dopo il test: 0,30 € a ritiro a carico del locale. Tariffa non attiva.
+Il primo mercato proposto è la pausa pranzo nella zona universitaria di Pescara. Occorre reclutare locali vicini con disponibilità autentiche, concordare piatti e orari, e invitare clienti a provare richieste reali. Il numero di locali nella demo non limita l’arena. Una prima prova serve a correggere il percorso; una sperimentazione più ampia deve misurare ritiri aggiuntivi, ritorno dei clienti, lavoro del gestore e disponibilità a pagare. Nessun pilota, partner aderente o ricavo è dichiarato come già ottenuto. La tariffa proposta di 0,70 € resta da validare.
 
 Codice del prodotto sviluppato con assistenza AI il **19 settembre 2026**, durante Team1 Hackathon. Starter e modello preesistenti sono dichiarati. Foto dell’app: Adedamola Oyenuga, [Pexels](https://www.pexels.com/photo/sandwich-on-yellow-surface-5006444/).
 
