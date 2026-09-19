@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "testCount": 13,
+  "durationMs": 8688,
+  "compiler": "0.8.30+commit.73712a01.Emscripten.clang",
+  "runtimeBytes": 6758,
+  "sourceSha256": "094d69cfdea721fb4f6d257cf6167e2c43b7459891e6e50fa2165d600fe36974",
+  "results": [
+    {
+      "name": "shared ABI, domain separator and source compile",
+      "passed": true,
+      "ms": 109
+    },
+    {
+      "name": "config merchant signature, nonce replay, domain and bounds",
+      "passed": true,
+      "ms": 716
+    },
+    {
+      "name": "gift deposit gives donor/relayer no withdrawal authority",
+      "passed": true,
+      "ms": 433
+    },
+    {
+      "name": "hold binds amount, terms, merchant, domain and merchant-scoped order ID",
+      "passed": true,
+      "ms": 1089
+    },
+    {
+      "name": "12 concurrent holds against funds for 5: exactly 5 succeeds",
+      "passed": true,
+      "ms": 498
+    },
+    {
+      "name": "config changes preserve reserved+spent and fixed old beneficiary",
+      "passed": true,
+      "ms": 751
+    },
+    {
+      "name": "beneficiary change cannot redirect a previously signed unsubmitted hold",
+      "passed": true,
+      "ms": 605
+    },
+    {
+      "name": "settlement requires separate merchant signature; simultaneous replay is single-use",
+      "passed": true,
+      "ms": 655
+    },
+    {
+      "name": "beneficiary pull only, withdrawal cannot touch held funds, permit withdrawal replay",
+      "passed": true,
+      "ms": 1028
+    },
+    {
+      "name": "expiry boundary restores funds once; old order cannot be reused",
+      "passed": true,
+      "ms": 656
+    },
+    {
+      "name": "per-order/lifetime and maximum 1 day enforce independent funding limits",
+      "passed": true,
+      "ms": 837
+    },
+    {
+      "name": "claim resists reentrancy and recipient rejection preserves credit",
+      "passed": true,
+      "ms": 964
+    },
+    {
+      "name": "mainnet 43114 deployment refused",
+      "passed": true,
+      "ms": 97
+    }
+  ],
+  "noDeployment": "Ganache in-memory only; no remote transaction sent"
+}

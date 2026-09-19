@@ -1,0 +1,83 @@
+{
+  "runAt": "2026-09-19T12:45:14.996Z",
+  "runtime": "v24.14.1",
+  "engine": "node:sqlite, SQLite in-memory; source SQL executed in explicit transactions",
+  "sourceHashes": {
+    "budget": "a194d9d9db77790d8dddcd2cdb109b898aea9fee5ba3e2893201458a829ab772",
+    "route": "fa99881ff102cd9538f9a2ddd1c2a621b788a4d53e5da1a8d0c34d1ea94427f2",
+    "seed": "2d859e3624dd3ab2c71a74e36fcd3ca537388050053764136c15dc541398f7d8",
+    "ticket": "6d37b21d6b9ccc1d0a91987f8302738c4078b71cacdf86c1ab20a5307d1aa39c"
+  },
+  "tests": [
+    {
+      "name": "Failed hold does not reactivate a competing offer or oversell the last portion",
+      "passed": true,
+      "evidence": {
+        "stock": 1,
+        "held": 1,
+        "available": 0,
+        "oldChoiceAccepted": false
+      }
+    },
+    {
+      "name": "An injected mandate insert failure rolls back the offer as well",
+      "passed": true,
+      "evidence": {
+        "offers": 0,
+        "mandates": 0
+      }
+    },
+    {
+      "name": "Successful offer and duplicate retry never leave an orphan mandate",
+      "passed": true,
+      "evidence": {
+        "offers": 1,
+        "mandates": 1,
+        "duplicateChanges": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "Two stale settlement reconciliations decrement stock exactly once",
+      "passed": true,
+      "evidence": {
+        "firstStockChanges": 1,
+        "staleStockChanges": 0,
+        "finalStock": 0,
+        "finalOffer": "collected"
+      }
+    },
+    {
+      "name": "Insufficient stock cannot be marked collected by an unrelated earlier write",
+      "passed": true,
+      "evidence": {
+        "stockChanges": 0,
+        "offerChanges": 0,
+        "remainingState": "settling",
+        "serverCodeThrowsReconciliationError": true
+      }
+    },
+    {
+      "name": "Stale held and failed-hold reconciliation cannot regress a collected order",
+      "passed": true,
+      "evidence": {
+        "request": "collected",
+        "offer": "collected",
+        "mandate": "settled",
+        "stock": 0
+      }
+    }
+  ],
+  "readOnlyChecks": {
+    "demoSeedBudgetStatementsBeforeSingleBatch": true,
+    "ticketReconcilesHeldAfterThreeSecondsPastPickup": true
+  },
+  "limits": [
+    "No RPC or transaction calls.",
+    "No Cloudflare D1 deployment execution.",
+    "Stale concurrent readers modeled by serial transaction batches; no multi-process load test.",
+    "Demo seeding and browser polling inspected in source, not executed in this script."
+  ]
+}

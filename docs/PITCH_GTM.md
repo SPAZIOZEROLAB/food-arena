@@ -1,28 +1,43 @@
-# Food Arena — pitch e primo mercato
+# Food Arena: pitch e primo mercato
 
-## Sessanta secondi
+## Pitch da 60 secondi
 
-> Ho dieci euro e mezz'ora per pranzare in Viale Pindaro. Con Food Arena pubblico una richiesta: sono i locali a propormi cosa mangiare, a quale prezzo totale e quando ritirarlo. Scelgo e ricevo il codice per il banco. Il gestore carica ciò che può preparare e autorizza l'AI a rispondere alle richieste compatibili: il modello lavora nel suo browser, senza chiavi API, rispettando prezzi e quantità impostati. Su Avalanche Fuji registro un'impronta verificabile dell'attestazione di ritiro. È una transazione reale di test, non un pagamento né una prova della consegna fisica. La demo si prova subito con tre locali dichiaratamente fittizi. Il primo mercato è concreto: due locali, dieci studenti, cinque pranzi in Viale Pindaro. Misureremo ritiri, lavoro del gestore e disponibilità a pagare. Oggi il prototipo c'è; i clienti vanno conquistati.
+Ho dieci euro e mezz’ora per pranzare in Viale Pindaro. Su Food Arena pubblico questa richiesta e i locali propongono un piatto preciso. Il cliente sceglie, il locale prepara.
 
-## Il primo esperimento commerciale
+L’AI lavora nel browser del gestore: confronta le richieste con il menù e invia proposte autorizzate finché il pannello resta aperto.
 
-**Una zona, una fascia oraria, un bisogno:** studenti e lavoratori che cercano un pranzo da ritirare vicino al campus, con budget e tempo già definiti.
+Il gestore firma un mandato. Avalanche custodisce il budget di acquisizione e applica i limiti. La scelta riserva la commissione. Il ritiro attestato la assegna al beneficiario. Dopo la scadenza una transazione libera la riserva.
 
-| Passo proposto | Azione e prova da raccogliere |
-|---|---|
-| Prima del lancio | Ottenere il consenso di due locali; concordare 2–3 piatti, quantità dedicate, prezzi sostenibili e fasce di ritiro. Nessun locale risulta già aderente. |
-| Primo canale | Reclutare di persona dieci studenti con un QR, nella zona servita e solo dopo avere disponibilità reali. |
-| Cinque pranzi | Assistere gestori e studenti; misurare prima offerta, scelte, ritiri dichiarati, no-show e minuti aggiuntivi di lavoro. |
-| Decisione | Obiettivi da verificare: almeno 6 studenti su 10 ritirano e tutti e due i locali vogliono ripetere. Chiedere se gli acquisti sarebbero avvenuti comunque nello stesso locale. |
+La demo usa test AVAX e locali fittizi. Il codice è pubblico MIT. Proponiamo due locali, dieci studenti e cinque giorni per verificare ritiri, lavoro del gestore e disponibilità a pagare.
 
-**Chi paga:** ipotesi da validare, l'esercente per ricevere domanda qualificata e rispondere con meno lavoro. Il test è gratuito. Dopo, confrontare due formule alternative: **15 €/mese** oppure **0,30 € per ritiro registrato**, senza sommarle. A 50 ritiri mensili equivalgono; su 10 € la seconda vale il 3%. Non sono tariffe attive né ricavi ottenuti. Nessun sovrapprezzo automatico al cliente.
+## Perché un locale potrebbe provarlo
 
-L'inferenza locale evita un costo API per richiesta; restano hosting, traffico del modello, supporto e acquisizione. La sostenibilità richiede margine del locale e riuso, non soltanto ordini conteggiati.
+Il bisogno da verificare è concreto: ricevere richieste vicine che rispettano tempi, porzioni e prezzi già autorizzati, senza riscrivere ogni proposta. Il locale mantiene la decisione sul menù e il controllo del mandato. Il cliente sceglie fra offerte complete e paga il pranzo direttamente al locale.
 
-## Le prove da mostrare
+La prova Fuji finanzia le commissioni dal budget intestato al firmatario del locale. Nella demo lo sponsor fornisce i token di prova. Una futura attività commerciale dovrebbe validare come il locale finanzia e recupera il proprio budget, oltre a supporto, no-show e gestione delle contestazioni.
 
-La demo anonima prova richiesta, scelta, codice, ritiro simulato e registrazione Fuji. Le prime tre offerte sono predefinite. Per dimostrare l'AI, aprire il pannello gestore: modello caricato, confronto semantico eseguito e nuova proposta inviata dopo autorizzazione. Mostrare infine una transazione confermata, senza chiamarla pagamento.
+## Primo canale e pilota
 
-**Obiezione decisiva:** i locali devono aggiornare le quantità e tenere aperto il pannello. Se il lavoro aggiuntivo supera gli ordini ottenuti, il pilota fallisce. La risposta è misurarlo con due attività prima di espandere la zona.
+1. Reclutare direttamente due gestori nell’area di Viale Pindaro, verificando autorizzazione e disponibilità a dedicare poche porzioni a pranzo. Non sono partner già acquisiti.
+2. Concordare piatti, prezzi completi, quantità e tempo massimo di preparazione. Fare un breve test del pannello con ciascun gestore.
+3. Invitare dieci studenti tramite QR nei punti aderenti, soltanto dopo aver attivato disponibilità autentiche.
+4. Provare per cinque giorni di pranzo. Registrare richieste, offerte compatibili, ritiri completati, ritardi e minuti di lavoro del gestore.
+5. Intervistare entrambi i gestori su margine del pasto, sostenibilità dell’onere operativo e volontà di ripetere. Concordare prima eventuali soglie per continuare, senza presentarle come risultati già ottenuti.
 
-**Ruolo attuale di Avalanche:** registro esterno consultabile delle attestazioni della piattaforma, con divieto di sovrascrittura. La sua utilità per riconciliazioni fra soggetti diversi resta da validare; il prototipo non dimostra che la blockchain sia indispensabile al mercato.
+## Chi paga e per cosa
+
+Ipotesi da testare dopo il pilota: **0,30 € per ritiro completato, a carico del locale**, per l’acquisizione della richiesta e l’automazione della proposta. Tariffa non attiva. Nessun sovrapprezzo previsto per il cliente. I test AVAX della dimostrazione non rappresentano 0,30 € e non hanno un cambio impostato.
+
+Oggi il progetto dichiara **zero partner aderenti e nessun ricavo verificato**. La priorità commerciale è verificare che la richiesta porti un ritiro incrementale e che il lavoro aggiuntivo resti sostenibile.
+
+## Ruolo di AI e Avalanche
+
+L’AI esegue confronto semantico e, se autorizzata, avvia offerte firmate. Le regole del prodotto controllano vincoli e disponibilità. L’autonomia attuale richiede pagina aperta e chiave locale disponibile.
+
+Avalanche custodisce il budget e rifiuta spese incompatibili con firma, fondi e limiti. Il relayer inoltra le operazioni e paga il gas. Per i gestori registrati non possiede la chiave che autorizza Hold e Settlement. Nella prova relayer e beneficiario coincidono, ma il merchant è distinto. Le chiavi dei tre locali fittizi restano invece server-side, esclusivamente per rendere immediata la demo.
+
+L’obiezione più forte è che un singolo intermediario potrebbe gestire un sistema analogo in un database. Il vantaggio da validare è consentire un budget verificabile e autorizzazioni applicabili anche a intermediari diversi. Nel prototipo l’accettazione dipende già dalla riserva confermata dal contratto. Questa integrazione dimostra il controllo economico; non dimostra ancora che i locali lo richiedano né risolve le contestazioni sulla consegna fisica.
+
+## Prove da mostrare
+
+[App](https://food-arena.eldamarchigiano.chatgpt.site), [mandato](https://food-arena.eldamarchigiano.chatgpt.site/mandato) e [GitHub](https://github.com/SPAZIOZEROLAB/food-arena). Il contratto ha superato tredici gruppi di test locali. La prova dell’app locale contro Fuji reale ha superato quaranta controlli: dodici scelte concorrenti producono una sola riserva, il ritiro un solo settlement e un solo decremento delle porzioni. Il test locale non attesta da solo il deploy pubblico. Per la demo pubblica usare gli esiti effettivi della pagina del mandato. [Report di integrazione](tests-budget-integration/README.md).

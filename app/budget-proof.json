@@ -1,0 +1,214 @@
+{
+  "contract": "0x1077e1317345de42af33B0E048bC2cD725Cf9fC5",
+  "chainId": 43113,
+  "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
+  "fromBlock": 58483425,
+  "deployTx": "0x1c1ef1fed3985f8a83335d9d805589ae415cdbf3d029acd604113b5eebe4c2df",
+  "relayer": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+  "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+  "merchant": "0xe117d1D66E1dA32C0D57971B206304ca9277a84B",
+  "demoWallets": {
+    "verde": {
+      "address": "0x3E0D46E4C8aD1DeCA7c695fDE0BAb939dd32B23D",
+      "funding": "5000000000000000",
+      "configureTx": "0x055df1439191d91a958b048db5933439c5499297047a4d88d93c8792bd07ccb5",
+      "fundTx": "0x123cc26db8eb2bd341b51d416f9fc18c03757717b03daaa94e3a79e574a0cb0c"
+    },
+    "bowl": {
+      "address": "0xb015a123C83038ea2Fc1e274618736a3F0D31D89",
+      "funding": "5000000000000000",
+      "configureTx": "0x48867f8418fd2cc2efebd00513ddea39fa55b27f992c1c7a0a00547703087168",
+      "fundTx": "0x15e9df1162bfe6c5e2da0634770d244e48a146a1ef60cdb43674af745700cf93"
+    },
+    "forno": {
+      "address": "0x683299c90DEA22Cf233D50359e46B5ca631Cc30F",
+      "funding": "5000000000000000",
+      "configureTx": "0xc19022461b4f67e599664de0d706cdcc4e980bf2fa213fd8c984799611b41b9f",
+      "fundTx": "0xf0e4aeac98fafe9303a74ccc6cef067270e193d644f0b483bc8ead4c6594e31f"
+    }
+  },
+  "commission": "100000000000000",
+  "lifetime": "10000000000000000",
+  "sourceSha256": "094d69cfdea721fb4f6d257cf6167e2c43b7459891e6e50fa2165d600fe36974",
+  "ready": true,
+  "proof": {
+    "tests": [
+      {
+        "name": "Fuji deployment matches tested bytecode",
+        "passed": true,
+        "evidence": {
+          "chainId": 43113,
+          "contract": "0x1077e1317345de42af33B0E048bC2cD725Cf9fC5",
+          "txHash": "0x1c1ef1fed3985f8a83335d9d805589ae415cdbf3d029acd604113b5eebe4c2df",
+          "sourceSha256": "094d69cfdea721fb4f6d257cf6167e2c43b7459891e6e50fa2165d600fe36974",
+          "runtimeBytes": 6758
+        }
+      },
+      {
+        "name": "scripted verde merchant with separate key configured and funded",
+        "passed": true,
+        "evidence": {
+          "merchant": "0x3E0D46E4C8aD1DeCA7c695fDE0BAb939dd32B23D",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "available": "5000000000000000",
+          "configureTx": "0x055df1439191d91a958b048db5933439c5499297047a4d88d93c8792bd07ccb5",
+          "fundTx": "0x123cc26db8eb2bd341b51d416f9fc18c03757717b03daaa94e3a79e574a0cb0c",
+          "keyControl": "All demo/proof keys are controlled by this test script; no independent-business claim."
+        }
+      },
+      {
+        "name": "scripted bowl merchant with separate key configured and funded",
+        "passed": true,
+        "evidence": {
+          "merchant": "0xb015a123C83038ea2Fc1e274618736a3F0D31D89",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "available": "5000000000000000",
+          "configureTx": "0x48867f8418fd2cc2efebd00513ddea39fa55b27f992c1c7a0a00547703087168",
+          "fundTx": "0x15e9df1162bfe6c5e2da0634770d244e48a146a1ef60cdb43674af745700cf93",
+          "keyControl": "All demo/proof keys are controlled by this test script; no independent-business claim."
+        }
+      },
+      {
+        "name": "scripted forno merchant with separate key configured and funded",
+        "passed": true,
+        "evidence": {
+          "merchant": "0x683299c90DEA22Cf233D50359e46B5ca631Cc30F",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "available": "5000000000000000",
+          "configureTx": "0xc19022461b4f67e599664de0d706cdcc4e980bf2fa213fd8c984799611b41b9f",
+          "fundTx": "0xf0e4aeac98fafe9303a74ccc6cef067270e193d644f0b483bc8ead4c6594e31f",
+          "keyControl": "All demo/proof keys are controlled by this test script; no independent-business claim."
+        }
+      },
+      {
+        "name": "scripted proof merchant with separate key configured and funded",
+        "passed": true,
+        "evidence": {
+          "merchant": "0xe117d1D66E1dA32C0D57971B206304ca9277a84B",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "available": "2000000000000000",
+          "configureTx": "0x230496c221bbab941ac170988e2d93aa2e427251e56060191f399d2bc9511a41",
+          "fundTx": "0x3da2b511b910973a026bee88af02b41b466c92cdf522602d2ed35da502dd7c01",
+          "keyControl": "All demo/proof keys are controlled by this test script; no independent-business claim."
+        }
+      },
+      {
+        "name": "over-cap mandate rejected without transaction",
+        "passed": true,
+        "evidence": {
+          "revertedWith": "InvalidAmount",
+          "noTransactionSent": true
+        }
+      },
+      {
+        "name": "relayer signature cannot authorize merchant spend",
+        "passed": true,
+        "evidence": {
+          "revertedWith": "InvalidSignature",
+          "noTransactionSent": true
+        }
+      },
+      {
+        "name": "merchant authorization holds native budget",
+        "passed": true,
+        "evidence": {
+          "merchant": "0xe117d1D66E1dA32C0D57971B206304ca9277a84B",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "amount": "100000000000000",
+          "expiresAt": 1789825277,
+          "termsHash": "0x5130e8a0accff15818b736ec7fd6c16cbefb1e6b8f65792fff3334523507ad73",
+          "fulfilmentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "state": 1,
+          "txHash": "0xf85d22e4c4eab529170124abe4cd84b2392ab1259d2d68a0f4e6a6dee16d15fc"
+        }
+      },
+      {
+        "name": "settlement spends once and credits fixed beneficiary",
+        "passed": true,
+        "evidence": {
+          "merchant": "0xe117d1D66E1dA32C0D57971B206304ca9277a84B",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "amount": "100000000000000",
+          "expiresAt": 1789825277,
+          "termsHash": "0x5130e8a0accff15818b736ec7fd6c16cbefb1e6b8f65792fff3334523507ad73",
+          "fulfilmentHash": "0x952b4aa593d008ba5d7c6b0e5b7b5d67fe9f6a000b28ec8385f6231e5557ff13",
+          "state": 2,
+          "credit": "100000000000000",
+          "txHash": "0x170b9d90e23b91b38c55b2a6322ceca5a290df8ecd72261a6e6b6808e3a6112b",
+          "checkedAtBlock": 58483440
+        }
+      },
+      {
+        "name": "duplicate settlement rejected without transaction",
+        "passed": true,
+        "evidence": {
+          "revertedWith": "InvalidOrder",
+          "noTransactionSent": true
+        }
+      },
+      {
+        "name": "only beneficiary pulls its commission",
+        "passed": true,
+        "evidence": {
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "amount": "100000000000000",
+          "txHash": "0x3e4569b3c77df0ab85950d083bb987cb6d375a48a631eb90e7a575189298c0d2",
+          "checkedAtBlock": 58483496
+        }
+      },
+      {
+        "name": "short-lived reserve locks commission before expiry",
+        "passed": true,
+        "evidence": {
+          "merchant": "0xe117d1D66E1dA32C0D57971B206304ca9277a84B",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "amount": "100000000000000",
+          "expiresAt": 1789821945,
+          "termsHash": "0x995074804da79654acb813708c8784f5c97c978644d810c30c97baca7adfbdda",
+          "fulfilmentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "state": 1,
+          "txHash": "0x9cc46e7d5dc0a46ff55edcc4058889f5e58ffa0f77c22a87e04e3e13a74ae9f6",
+          "checkedAtBlock": 58483497
+        }
+      },
+      {
+        "name": "permissionless expiry release restores available funds",
+        "passed": true,
+        "evidence": {
+          "merchant": "0xe117d1D66E1dA32C0D57971B206304ca9277a84B",
+          "beneficiary": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+          "amount": "100000000000000",
+          "expiresAt": 1789821945,
+          "termsHash": "0x995074804da79654acb813708c8784f5c97c978644d810c30c97baca7adfbdda",
+          "fulfilmentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "state": 3,
+          "available": "1900000000000000",
+          "reserved": "0",
+          "spent": "100000000000000",
+          "txHash": "0x684bef69dd96fc9c84c0816a40cf840e47b3b12a1acfb8d9dbd40523934f33be",
+          "checkedAtBlock": 58483505
+        }
+      },
+      {
+        "name": "contract liabilities equal remaining native balance",
+        "passed": true,
+        "evidence": {
+          "available": "16900000000000000",
+          "reserved": "0",
+          "credits": "0",
+          "balance": "16900000000000000",
+          "checkedAtBlock": 58483505
+        }
+      }
+    ],
+    "fundTx": "0x3da2b511b910973a026bee88af02b41b466c92cdf522602d2ed35da502dd7c01",
+    "holdTx": "0xf85d22e4c4eab529170124abe4cd84b2392ab1259d2d68a0f4e6a6dee16d15fc",
+    "settleTx": "0x170b9d90e23b91b38c55b2a6322ceca5a290df8ecd72261a6e6b6808e3a6112b",
+    "releaseTx": "0x684bef69dd96fc9c84c0816a40cf840e47b3b12a1acfb8d9dbd40523934f33be",
+    "claimTx": "0x3e4569b3c77df0ab85950d083bb987cb6d375a48a631eb90e7a575189298c0d2",
+    "expiryHoldTx": "0x9cc46e7d5dc0a46ff55edcc4058889f5e58ffa0f77c22a87e04e3e13a74ae9f6",
+    "passed": true,
+    "completedAt": "2026-09-19T12:45:59.141Z"
+  },
+  "updatedAt": "2026-09-19T12:45:59.141Z"
+}

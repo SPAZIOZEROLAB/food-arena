@@ -1,5 +1,7 @@
 # Food Arena — prova nuovo backend demo
 
+**Archivio della versione precedente al mandato.** Il flusso attuale riserva e regola la commissione su Fuji. I controlli aggiornati si trovano in `docs/tests-budget-integration`; questo rapporto resta come evidenza storica, non come certificazione della nuova versione.
+
 **PASS: 11 controlli**, 19 settembre 2026. Script `arena-test.cjs`, report `arena-result.json`. API locale `http://localhost:5173/api/passo`, nuova sessione cliente anonima, solo `demo: true`. Nessuna modifica ai sorgenti, accesso diretto al DB live o attestazione owner su Fuji.
 
 | Prova | Evidenza |

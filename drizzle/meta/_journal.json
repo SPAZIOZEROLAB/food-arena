@@ -8,6 +8,13 @@
       "when": 1789813494620,
       "tag": "0000_flaky_stature",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789821397186,
+      "tag": "0001_shocking_photon",
+      "breakpoints": true
     }
   ]
 }

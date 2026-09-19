@@ -1,5 +1,7 @@
 # Food Arena — stress test locale isolato
 
+**Archivio della versione precedente al mandato.** Questi risultati descrivono il flusso iniziale senza escrow. Per la versione con Avalanche vincolante vedere `docs/tests-budget-contract`, `docs/tests-budget-sql` e `docs/tests-budget-integration`; non usare questo script come verifica del nuovo checkout.
+
 Esito del 19 settembre 2026: **PASS**. Endpoint `http://localhost:5173/api/passo`, solo richieste con `demo: true`, nessun `arena`, nessuna attestazione blockchain e nessuna modifica ai sorgenti del checkout. Login tramite il normale `/signin-with-chatgpt` locale. Nessun header di autenticazione o IP contraffatto, cookie ruotato per aggirare limiti o accesso diretto al database live.
 
 ## Prova HTTP

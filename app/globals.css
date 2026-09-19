@@ -15,3 +15,29 @@ body{background:var(--background);color:var(--foreground)}.shell{max-width:1410p
 @media(prefers-reduced-motion:no-preference){.arena-offer{animation:arrive .35s ease-out both}.arena-offer:nth-child(2){animation-delay:.07s}.arena-offer:nth-child(3){animation-delay:.14s}@keyframes arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}}
 @media(min-width:761px){.arena-heading{margin:18px 0}.arena-heading h1{margin:10px 0 14px}.demo-banner{margin:18px 0 20px}.journey{padding:14px 0}.offers-heading{margin:19px 0 15px}.offer-top{height:73px}.venue-symbol{width:43px;height:43px}.offer-body>p{min-height:64px}.offer-body h2{margin-top:13px}.offer-price{margin-bottom:16px}}
 @media(max-width:760px){.intro h1{font-size:clamp(2.1rem,7.8vw,3.3rem)}.chips button{padding:7px 16px}.chips{flex-wrap:nowrap;gap:8px}.request-card{padding:21px 19px}.budget-input{margin:8px 0 12px;font-size:3.5rem}.intro{margin-top:16px}.request-card .top-margin{margin-top:17px}}
+
+/* Food Arena: buyer checkout with a merchant-funded Fuji mandate. */
+.fund-control{margin-top:18px;padding:23px 27px;border:1px solid #d8dece;border-radius:17px;background:#fff}
+.fund-control-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.fund-control-heading h3{margin-top:9px;font-size:19px;letter-spacing:-.025em}
+.fund-test-label{flex-shrink:0;padding:6px 9px;background:#edf2e2;color:#476031;border-radius:6px;font-size:10px;font-weight:800;letter-spacing:.09em}
+.fund-amount{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px;margin:18px 0 15px;font-size:13px;color:#536149}
+.fund-amount strong{font-size:27px;letter-spacing:-.035em;color:#17211f;font-variant-numeric:tabular-nums}
+.fund-amount>span{margin-left:6px;font-size:12px;color:#65735b}
+.fund-balances{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;padding:16px 0;margin:0 0 13px;border-top:1px solid #e0e5d7;border-bottom:1px solid #e0e5d7}
+.fund-balances div{min-width:0}.fund-balances dt{font-size:11px;color:#66745f}.fund-balances dd{margin:4px 0 0;font-size:17px;font-weight:700;color:#26371f;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.fund-links{display:flex;gap:12px 20px;flex-wrap:wrap;margin-top:16px}
+.fund-links a{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:#b9381f;text-decoration:underline;text-underline-offset:3px}
+.fund-pending{display:flex;align-items:flex-start;flex-direction:column;gap:15px;width:100%}
+.fund-pending h2{font-size:24px;line-height:1.2;letter-spacing:-.035em}
+.fund-pending p{font-size:14px;color:#49573f}.fund-pending p.caption{font-size:12px;color:#617153}
+.fund-pending-icon{display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#17211f;color:#eaff78}
+.fund-pending-card{max-width:740px;margin:27px auto 0;padding:30px;background:#eaff78;border:1px solid #d8ea76;border-radius:20px}
+.fund-earned{width:100%;margin-top:21px;padding:19px;background:#f8ffe4;border:1px solid #cbdc80;border-radius:12px}
+.fund-earned>strong{display:block;margin:10px 0;font-size:27px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.fund-earned>strong small{font-size:12px;letter-spacing:0;font-weight:600}
+.fund-earned>p{font-size:12px;color:#4e603b}.fund-earned>.caption{display:block;font-size:11px;margin-top:10px}
+.fund-legacy{padding:17px;background:#f7f9e9;border:1px solid #cbd39c;border-radius:10px}
+.fund-legacy h3{font-size:16px}.fund-legacy p{margin-top:8px;font-size:13px;color:#586743}
+@media(max-width:760px){.fund-control{padding:20px}.fund-control-heading h3{font-size:17px}.fund-control-heading .eyebrow{font-size:9px}.fund-test-label{font-size:9px;padding:5px 7px}.fund-amount>span{margin:0;width:100%}.fund-balances{gap:10px}.fund-balances dd{font-size:15px}.fund-balances dt{font-size:10px}.fund-links{gap:11px 16px}.fund-pending h2{font-size:23px}.fund-pending-card{padding:25px}.fund-earned>strong{font-size:25px}.pickup-panel>.primary{white-space:normal}}
+@media(prefers-reduced-motion:no-preference){.fund-pending-icon svg{animation:fund-spin 1.2s linear infinite}@keyframes fund-spin{to{transform:rotate(360deg)}}}
