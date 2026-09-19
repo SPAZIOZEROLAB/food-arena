@@ -1,0 +1,2758 @@
+{
+  "tag": "ARENA_TEST_2026-09-19T11-07-43-657Z",
+  "startedAt": "2026-09-19T11:07:43.658Z",
+  "sourceHashes": {
+    "app/api/passo/route.ts": "75f78add8a5e2dbbb598e8d213a507f061d6f5be7940501d32366168453ca1c7",
+    "app/arena-demo.ts": "3f20e69cc55c2a5b1dd211d07b68a1df8884c9a6670fd91ab013eb918b90dc8b"
+  },
+  "tests": [
+    {
+      "name": "anonymous-10-euro-three-scripted-offers",
+      "passed": true,
+      "detail": {
+        "requestId": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+        "budget": 1000,
+        "offers": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "title": "Focaccia caprese e acqua",
+            "price": 790,
+            "quantity": 1,
+            "scripted": 1,
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale"
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "title": "Cous cous, verdure e acqua",
+            "price": 850,
+            "quantity": 1,
+            "scripted": 1,
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale"
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "venue_id": "arena-demo-bowl-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "title": "Bowl di pollo e acqua",
+            "price": 990,
+            "quantity": 1,
+            "scripted": 1,
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pre-selection-codes-hidden",
+      "passed": true,
+      "detail": {
+        "hiddenCount": 3
+      }
+    },
+    {
+      "name": "one-choice-cancels-other-two",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "status": "accepted"
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "status": "cancelled"
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "status": "cancelled"
+          }
+        ],
+        "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+        "ownerChosenCodePresent": true
+      }
+    },
+    {
+      "name": "stranger-cannot-collect-or-attest",
+      "passed": true,
+      "detail": {
+        "demoCollectStatus": 403,
+        "demoAttestStatus": 403,
+        "hasDifferentCustomerCookie": true,
+        "attestSentBeforeCollection": true
+      }
+    },
+    {
+      "name": "multi-quantity-uses-total-price",
+      "passed": true,
+      "detail": {
+        "quantity": 2,
+        "totalBudget": 1700,
+        "offers": [
+          {
+            "title": "Focaccia caprese e acqua",
+            "price": 1580,
+            "quantity": 2
+          },
+          {
+            "title": "Cous cous, verdure e acqua",
+            "price": 1700,
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "vegetarian-excludes-affordable-chicken",
+      "passed": true,
+      "detail": {
+        "totalBudget": 2200,
+        "vegetarian": 1,
+        "offers": [
+          {
+            "title": "Focaccia caprese e acqua",
+            "price": 1580,
+            "quantity": 2
+          },
+          {
+            "title": "Cous cous, verdure e acqua",
+            "price": 1700,
+            "quantity": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "below-minimum-budget-honest-empty",
+      "passed": true,
+      "detail": {
+        "budget": 700,
+        "offers": 0,
+        "status": "open"
+      }
+    },
+    {
+      "name": "scripted-venue-zone-Porta Nuova",
+      "passed": true,
+      "detail": {
+        "zone": "Porta Nuova",
+        "offers": [
+          {
+            "venue_id": "arena-demo-forno-Porta%20Nuova",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "price": 790
+          },
+          {
+            "venue_id": "arena-demo-verde-Porta%20Nuova",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "price": 850
+          },
+          {
+            "venue_id": "arena-demo-bowl-Porta%20Nuova",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "price": 990
+          }
+        ],
+        "noCollisionWithEarlierZones": true
+      }
+    },
+    {
+      "name": "scripted-venue-zone-Pescara centro",
+      "passed": true,
+      "detail": {
+        "zone": "Pescara centro",
+        "offers": [
+          {
+            "venue_id": "arena-demo-forno-Pescara%20centro",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "price": 790
+          },
+          {
+            "venue_id": "arena-demo-verde-Pescara%20centro",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "price": 850
+          },
+          {
+            "venue_id": "arena-demo-bowl-Pescara%20centro",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "price": 990
+          }
+        ],
+        "noCollisionWithEarlierZones": true
+      }
+    },
+    {
+      "name": "owner-wrong-pickup-code-rejected",
+      "passed": true,
+      "detail": {
+        "status": 400,
+        "message": "Codice di ritiro non corretto."
+      }
+    },
+    {
+      "name": "owner-correct-code-single-demo-collection",
+      "passed": true,
+      "detail": {
+        "statuses": [
+          200,
+          400
+        ],
+        "requestStatus": "collected",
+        "offerStatus": "collected",
+        "proofHashPresent": true,
+        "txHash": null,
+        "validOwnerAttestCalls": 0
+      }
+    }
+  ],
+  "calls": [
+    {
+      "session": "owner",
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a"
+      },
+      "elapsedMs": 194
+    },
+    {
+      "session": "owner",
+      "action": "view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+            "vegetarian": 0,
+            "pickup_by": 1789817863786,
+            "created": 1789816063786,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 30
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+          "vegetarian": 0,
+          "pickup_by": 1789817863786,
+          "created": 1789816063786,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1501c156-0a26-4d59-9e17-8c9aa65d0e00",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816603793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1ec43281-cced-47de-a889-3e6ac8bce0a1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816723793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-bowl-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "969ae974-887a-4832-89e9-b000bda74f35",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816963793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816063916
+      },
+      "elapsedMs": 33
+    },
+    {
+      "session": "owner",
+      "action": "accept",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 61
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+          "vegetarian": 0,
+          "pickup_by": 1789817863786,
+          "created": 1789816063786,
+          "status": "accepted",
+          "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1501c156-0a26-4d59-9e17-8c9aa65d0e00",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816603793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "accepted",
+            "code": "[redacted]",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1ec43281-cced-47de-a889-3e6ac8bce0a1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816723793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-bowl-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "969ae974-887a-4832-89e9-b000bda74f35",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816963793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816064065
+      },
+      "elapsedMs": 88
+    },
+    {
+      "session": "stranger",
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "48fa24d2-5c78-4293-95e8-6d623a679e66"
+      },
+      "elapsedMs": 55
+    },
+    {
+      "session": "stranger",
+      "action": "view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "48fa24d2-5c78-4293-95e8-6d623a679e66",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z stranger session",
+            "vegetarian": 0,
+            "pickup_by": 1789817864155,
+            "created": 1789816064155,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 75
+    },
+    {
+      "session": "stranger",
+      "action": "view=request&id=48fa24d2-5c78-4293-95e8-6d623a679e66",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "48fa24d2-5c78-4293-95e8-6d623a679e66",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z stranger session",
+          "vegetarian": 0,
+          "pickup_by": 1789817864155,
+          "created": 1789816064155,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816064284
+      },
+      "elapsedMs": 43
+    },
+    {
+      "session": "stranger",
+      "action": "view=request&id=48fa24d2-5c78-4293-95e8-6d623a679e66",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "48fa24d2-5c78-4293-95e8-6d623a679e66",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z stranger session",
+          "vegetarian": 0,
+          "pickup_by": 1789817864155,
+          "created": 1789816064155,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816064329
+      },
+      "elapsedMs": 46
+    },
+    {
+      "session": "stranger",
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 47
+    },
+    {
+      "session": "stranger",
+      "action": "demoCollect",
+      "status": 403,
+      "body": {
+        "error": "Puoi simulare solo il tuo ritiro dimostrativo."
+      },
+      "elapsedMs": 47
+    },
+    {
+      "session": "stranger",
+      "action": "demoAttest",
+      "status": 403,
+      "body": {
+        "error": "Questa non è la tua prova."
+      },
+      "elapsedMs": 85
+    },
+    {
+      "session": "owner",
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "336a64fc-a32f-4f5f-8f82-db703dffd335"
+      },
+      "elapsedMs": 46
+    },
+    {
+      "session": "owner",
+      "action": "view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "budget": 1700,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+            "vegetarian": 0,
+            "pickup_by": 1789817864548,
+            "created": 1789816064548,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+            "vegetarian": 0,
+            "pickup_by": 1789817863786,
+            "created": 1789816063786,
+            "status": "accepted",
+            "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 39
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=336a64fc-a32f-4f5f-8f82-db703dffd335",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+          "budget": 1700,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+          "vegetarian": 0,
+          "pickup_by": 1789817864548,
+          "created": 1789816064548,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "20082d1c-32c1-4ad4-b5bf-1517de2dc923",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "20dce1cf-218c-49ca-8bee-7eaa81dad73f",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816604557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "038964d0-5310-4d12-8eef-bd6f89043f88",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9a29d91d-6a13-43c2-9a80-28d85fdca4bd",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816724557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816064640
+      },
+      "elapsedMs": 49
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=336a64fc-a32f-4f5f-8f82-db703dffd335",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+          "budget": 1700,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+          "vegetarian": 0,
+          "pickup_by": 1789817864548,
+          "created": 1789816064548,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "20082d1c-32c1-4ad4-b5bf-1517de2dc923",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "20dce1cf-218c-49ca-8bee-7eaa81dad73f",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816604557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "038964d0-5310-4d12-8eef-bd6f89043f88",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9a29d91d-6a13-43c2-9a80-28d85fdca4bd",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816724557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816064692
+      },
+      "elapsedMs": 54
+    },
+    {
+      "session": "owner",
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 122
+    },
+    {
+      "session": "owner",
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583"
+      },
+      "elapsedMs": 217
+    },
+    {
+      "session": "owner",
+      "action": "view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "budget": 2200,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+            "vegetarian": 1,
+            "pickup_by": 1789817865033,
+            "created": 1789816065033,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "budget": 1700,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+            "vegetarian": 0,
+            "pickup_by": 1789817864548,
+            "created": 1789816064548,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+            "vegetarian": 0,
+            "pickup_by": 1789817863786,
+            "created": 1789816063786,
+            "status": "accepted",
+            "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 53
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=7c3ccffe-769f-416d-bb0d-d215d3c54583",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+          "budget": 2200,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+          "vegetarian": 1,
+          "pickup_by": 1789817865033,
+          "created": 1789816065033,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c8b31631-ad35-4a1e-bd7e-acdcaefd0cc3",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "678d2955-6eeb-47c9-abcd-413b171dc490",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816605039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "ac5860b8-91df-402b-83f7-ebd503f02543",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9fa0bca7-e978-4af0-97e2-b7d78fc991d1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816725039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816065114
+      },
+      "elapsedMs": 24
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=7c3ccffe-769f-416d-bb0d-d215d3c54583",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+          "budget": 2200,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+          "vegetarian": 1,
+          "pickup_by": 1789817865033,
+          "created": 1789816065033,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c8b31631-ad35-4a1e-bd7e-acdcaefd0cc3",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "678d2955-6eeb-47c9-abcd-413b171dc490",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816605039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "ac5860b8-91df-402b-83f7-ebd503f02543",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9fa0bca7-e978-4af0-97e2-b7d78fc991d1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816725039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816065157
+      },
+      "elapsedMs": 37
+    },
+    {
+      "session": "owner",
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 65
+    },
+    {
+      "session": "owner",
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57"
+      },
+      "elapsedMs": 48
+    },
+    {
+      "session": "owner",
+      "action": "view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+            "budget": 700,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z below minimum price",
+            "vegetarian": 0,
+            "pickup_by": 1789817865262,
+            "created": 1789816065262,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "budget": 2200,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+            "vegetarian": 1,
+            "pickup_by": 1789817865033,
+            "created": 1789816065033,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "budget": 1700,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+            "vegetarian": 0,
+            "pickup_by": 1789817864548,
+            "created": 1789816064548,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+            "vegetarian": 0,
+            "pickup_by": 1789817863786,
+            "created": 1789816063786,
+            "status": "accepted",
+            "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 72
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+          "budget": 700,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z below minimum price",
+          "vegetarian": 0,
+          "pickup_by": 1789817865262,
+          "created": 1789816065262,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816065376
+      },
+      "elapsedMs": 75
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+          "budget": 700,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z below minimum price",
+          "vegetarian": 0,
+          "pickup_by": 1789817865262,
+          "created": 1789816065262,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816065442
+      },
+      "elapsedMs": 68
+    },
+    {
+      "session": "owner",
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 47
+    },
+    {
+      "session": "owner",
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "f8738e20-b9ac-4f20-98ad-7c5109051988"
+      },
+      "elapsedMs": 86
+    },
+    {
+      "session": "owner",
+      "action": "view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Porta Nuova",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Porta Nuova",
+            "vegetarian": 0,
+            "pickup_by": 1789817865573,
+            "created": 1789816065573,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+            "budget": 700,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z below minimum price",
+            "vegetarian": 0,
+            "pickup_by": 1789817865262,
+            "created": 1789816065262,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "budget": 2200,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+            "vegetarian": 1,
+            "pickup_by": 1789817865033,
+            "created": 1789816065033,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "budget": 1700,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+            "vegetarian": 0,
+            "pickup_by": 1789817864548,
+            "created": 1789816064548,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+            "vegetarian": 0,
+            "pickup_by": 1789817863786,
+            "created": 1789816063786,
+            "status": "accepted",
+            "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 42
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=f8738e20-b9ac-4f20-98ad-7c5109051988",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Porta Nuova",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Porta Nuova",
+          "vegetarian": 0,
+          "pickup_by": 1789817865573,
+          "created": 1789816065573,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "f3c6c15d-2137-4f79-a601-74d6934f554c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-forno-Porta%20Nuova",
+            "menu_id": "b67ce0e9-bfd9-4b62-870d-c3611be904b0",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "acf54f96-179c-4986-b273-3f2dac21004c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-verde-Porta%20Nuova",
+            "menu_id": "649bf5b0-b25c-41ce-aa46-035f4506a6f7",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "540a8538-86ff-4337-aad0-e318f3facee2",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-bowl-Porta%20Nuova",
+            "menu_id": "ff7a341b-fa4c-438a-814b-61c2b7433e68",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816065702
+      },
+      "elapsedMs": 47
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=f8738e20-b9ac-4f20-98ad-7c5109051988",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Porta Nuova",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Porta Nuova",
+          "vegetarian": 0,
+          "pickup_by": 1789817865573,
+          "created": 1789816065573,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "f3c6c15d-2137-4f79-a601-74d6934f554c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-forno-Porta%20Nuova",
+            "menu_id": "b67ce0e9-bfd9-4b62-870d-c3611be904b0",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "acf54f96-179c-4986-b273-3f2dac21004c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-verde-Porta%20Nuova",
+            "menu_id": "649bf5b0-b25c-41ce-aa46-035f4506a6f7",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "540a8538-86ff-4337-aad0-e318f3facee2",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-bowl-Porta%20Nuova",
+            "menu_id": "ff7a341b-fa4c-438a-814b-61c2b7433e68",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816065759
+      },
+      "elapsedMs": 80
+    },
+    {
+      "session": "owner",
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 37
+    },
+    {
+      "session": "owner",
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319"
+      },
+      "elapsedMs": 28
+    },
+    {
+      "session": "owner",
+      "action": "view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Pescara centro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Pescara centro",
+            "vegetarian": 0,
+            "pickup_by": 1789817865851,
+            "created": 1789816065851,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Porta Nuova",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Porta Nuova",
+            "vegetarian": 0,
+            "pickup_by": 1789817865573,
+            "created": 1789816065573,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+            "budget": 700,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z below minimum price",
+            "vegetarian": 0,
+            "pickup_by": 1789817865262,
+            "created": 1789816065262,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "budget": 2200,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+            "vegetarian": 1,
+            "pickup_by": 1789817865033,
+            "created": 1789816065033,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "budget": 1700,
+            "quantity": 2,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+            "vegetarian": 0,
+            "pickup_by": 1789817864548,
+            "created": 1789816064548,
+            "status": "cancelled",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "budget": 1000,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+            "vegetarian": 0,
+            "pickup_by": 1789817863786,
+            "created": 1789816063786,
+            "status": "accepted",
+            "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 23
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Pescara centro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Pescara centro",
+          "vegetarian": 0,
+          "pickup_by": 1789817865851,
+          "created": 1789816065851,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c032c0ef-b235-41d0-84e9-8de5348da365",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-forno-Pescara%20centro",
+            "menu_id": "8b39b8a5-eff2-4d17-acb0-3bd62781eaca",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "4bcc5dfc-b7ce-4c27-989e-bf02fff90c6d",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-verde-Pescara%20centro",
+            "menu_id": "697996ce-95aa-4474-a1b8-5e917b3ff35a",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "d31fa47a-5677-409f-ab0e-9cee9f4d71b2",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-bowl-Pescara%20centro",
+            "menu_id": "247ac234-b1be-4c68-8fe4-6a097fab811b",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816065903
+      },
+      "elapsedMs": 61
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Pescara centro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Pescara centro",
+          "vegetarian": 0,
+          "pickup_by": 1789817865851,
+          "created": 1789816065851,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c032c0ef-b235-41d0-84e9-8de5348da365",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-forno-Pescara%20centro",
+            "menu_id": "8b39b8a5-eff2-4d17-acb0-3bd62781eaca",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "4bcc5dfc-b7ce-4c27-989e-bf02fff90c6d",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-verde-Pescara%20centro",
+            "menu_id": "697996ce-95aa-4474-a1b8-5e917b3ff35a",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "d31fa47a-5677-409f-ab0e-9cee9f4d71b2",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-bowl-Pescara%20centro",
+            "menu_id": "247ac234-b1be-4c68-8fe4-6a097fab811b",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816065974
+      },
+      "elapsedMs": 63
+    },
+    {
+      "session": "owner",
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 64
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+          "vegetarian": 0,
+          "pickup_by": 1789817863786,
+          "created": 1789816063786,
+          "status": "accepted",
+          "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1501c156-0a26-4d59-9e17-8c9aa65d0e00",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816603793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "accepted",
+            "code": "[redacted]",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1ec43281-cced-47de-a889-3e6ac8bce0a1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816723793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-bowl-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "969ae974-887a-4832-89e9-b000bda74f35",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816963793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066103
+      },
+      "elapsedMs": 31
+    },
+    {
+      "session": "owner",
+      "action": "demoCollect",
+      "status": 400,
+      "body": {
+        "error": "Codice di ritiro non corretto."
+      },
+      "elapsedMs": 24
+    },
+    {
+      "session": "owner",
+      "action": "demoCollect",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "proofHash": "fb4464c0e5ef44827b84a23bb013322935c781aaad4d970a7edd8a65c2edb6cc"
+      },
+      "elapsedMs": 33
+    },
+    {
+      "session": "owner",
+      "action": "demoCollect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 33
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+          "vegetarian": 0,
+          "pickup_by": 1789817863786,
+          "created": 1789816063786,
+          "status": "collected",
+          "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1501c156-0a26-4d59-9e17-8c9aa65d0e00",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816603793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "collected",
+            "code": "[redacted]",
+            "proof_hash": "fb4464c0e5ef44827b84a23bb013322935c781aaad4d970a7edd8a65c2edb6cc",
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1ec43281-cced-47de-a889-3e6ac8bce0a1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816723793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-bowl-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "969ae974-887a-4832-89e9-b000bda74f35",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816963793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066196
+      },
+      "elapsedMs": 53
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+          "vegetarian": 0,
+          "pickup_by": 1789817863786,
+          "created": 1789816063786,
+          "status": "collected",
+          "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1501c156-0a26-4d59-9e17-8c9aa65d0e00",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816603793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "collected",
+            "code": "[redacted]",
+            "proof_hash": "fb4464c0e5ef44827b84a23bb013322935c781aaad4d970a7edd8a65c2edb6cc",
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1ec43281-cced-47de-a889-3e6ac8bce0a1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816723793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-bowl-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "969ae974-887a-4832-89e9-b000bda74f35",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816963793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066260
+      },
+      "elapsedMs": 42
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z offerta solo dimostrativa",
+          "vegetarian": 0,
+          "pickup_by": 1789817863786,
+          "created": 1789816063786,
+          "status": "collected",
+          "chosen": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "6b07b0a4-d784-4565-b56a-2325b6ab7ee1",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1501c156-0a26-4d59-9e17-8c9aa65d0e00",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816603793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "collected",
+            "code": "[redacted]",
+            "proof_hash": "fb4464c0e5ef44827b84a23bb013322935c781aaad4d970a7edd8a65c2edb6cc",
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "0b3fc17a-1c9f-444f-8e5c-0fb5f0bfd7f8",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "1ec43281-cced-47de-a889-3e6ac8bce0a1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816723793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "cbcec871-3a19-463c-b0bd-a86330c5c94d",
+            "request_id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+            "venue_id": "arena-demo-bowl-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "969ae974-887a-4832-89e9-b000bda74f35",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816963793,
+            "expires": 1789816243793,
+            "created": 1789816063793,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066286
+      },
+      "elapsedMs": 26
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=336a64fc-a32f-4f5f-8f82-db703dffd335",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+          "budget": 1700,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+          "vegetarian": 0,
+          "pickup_by": 1789817864548,
+          "created": 1789816064548,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "20082d1c-32c1-4ad4-b5bf-1517de2dc923",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "20dce1cf-218c-49ca-8bee-7eaa81dad73f",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816604557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "038964d0-5310-4d12-8eef-bd6f89043f88",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9a29d91d-6a13-43c2-9a80-28d85fdca4bd",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816724557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066318
+      },
+      "elapsedMs": 53
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=336a64fc-a32f-4f5f-8f82-db703dffd335",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+          "budget": 1700,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z multi quantity total budget",
+          "vegetarian": 0,
+          "pickup_by": 1789817864548,
+          "created": 1789816064548,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "20082d1c-32c1-4ad4-b5bf-1517de2dc923",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "20dce1cf-218c-49ca-8bee-7eaa81dad73f",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816604557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "038964d0-5310-4d12-8eef-bd6f89043f88",
+            "request_id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9a29d91d-6a13-43c2-9a80-28d85fdca4bd",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816724557,
+            "expires": 1789816244557,
+            "created": 1789816064557,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066389
+      },
+      "elapsedMs": 56
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=7c3ccffe-769f-416d-bb0d-d215d3c54583",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+          "budget": 2200,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+          "vegetarian": 1,
+          "pickup_by": 1789817865033,
+          "created": 1789816065033,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c8b31631-ad35-4a1e-bd7e-acdcaefd0cc3",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "678d2955-6eeb-47c9-abcd-413b171dc490",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816605039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "ac5860b8-91df-402b-83f7-ebd503f02543",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9fa0bca7-e978-4af0-97e2-b7d78fc991d1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816725039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066425
+      },
+      "elapsedMs": 30
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=7c3ccffe-769f-416d-bb0d-d215d3c54583",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+          "budget": 2200,
+          "quantity": 2,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z vegetarian only",
+          "vegetarian": 1,
+          "pickup_by": 1789817865033,
+          "created": 1789816065033,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c8b31631-ad35-4a1e-bd7e-acdcaefd0cc3",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-forno-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "678d2955-6eeb-47c9-abcd-413b171dc490",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1580,
+            "quantity": 2,
+            "ready_at": 1789816605039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "ac5860b8-91df-402b-83f7-ebd503f02543",
+            "request_id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+            "venue_id": "arena-demo-verde-Universit%C3%A0%20%2F%20Viale%20Pindaro",
+            "menu_id": "9fa0bca7-e978-4af0-97e2-b7d78fc991d1",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 1700,
+            "quantity": 2,
+            "ready_at": 1789816725039,
+            "expires": 1789816245039,
+            "created": 1789816065039,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Università / Viale Pindaro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066457
+      },
+      "elapsedMs": 66
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+          "budget": 700,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z below minimum price",
+          "vegetarian": 0,
+          "pickup_by": 1789817865262,
+          "created": 1789816065262,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816066525
+      },
+      "elapsedMs": 34
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+          "budget": 700,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z below minimum price",
+          "vegetarian": 0,
+          "pickup_by": 1789817865262,
+          "created": 1789816065262,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816066550
+      },
+      "elapsedMs": 24
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=f8738e20-b9ac-4f20-98ad-7c5109051988",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Porta Nuova",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Porta Nuova",
+          "vegetarian": 0,
+          "pickup_by": 1789817865573,
+          "created": 1789816065573,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "f3c6c15d-2137-4f79-a601-74d6934f554c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-forno-Porta%20Nuova",
+            "menu_id": "b67ce0e9-bfd9-4b62-870d-c3611be904b0",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "acf54f96-179c-4986-b273-3f2dac21004c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-verde-Porta%20Nuova",
+            "menu_id": "649bf5b0-b25c-41ce-aa46-035f4506a6f7",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "540a8538-86ff-4337-aad0-e318f3facee2",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-bowl-Porta%20Nuova",
+            "menu_id": "ff7a341b-fa4c-438a-814b-61c2b7433e68",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066579
+      },
+      "elapsedMs": 76
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=f8738e20-b9ac-4f20-98ad-7c5109051988",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Porta Nuova",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Porta Nuova",
+          "vegetarian": 0,
+          "pickup_by": 1789817865573,
+          "created": 1789816065573,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "f3c6c15d-2137-4f79-a601-74d6934f554c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-forno-Porta%20Nuova",
+            "menu_id": "b67ce0e9-bfd9-4b62-870d-c3611be904b0",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "acf54f96-179c-4986-b273-3f2dac21004c",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-verde-Porta%20Nuova",
+            "menu_id": "649bf5b0-b25c-41ce-aa46-035f4506a6f7",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "540a8538-86ff-4337-aad0-e318f3facee2",
+            "request_id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+            "venue_id": "arena-demo-bowl-Porta%20Nuova",
+            "menu_id": "ff7a341b-fa4c-438a-814b-61c2b7433e68",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965613,
+            "expires": 1789816245613,
+            "created": 1789816065613,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Porta Nuova · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066667
+      },
+      "elapsedMs": 43
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Pescara centro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Pescara centro",
+          "vegetarian": 0,
+          "pickup_by": 1789817865851,
+          "created": 1789816065851,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c032c0ef-b235-41d0-84e9-8de5348da365",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-forno-Pescara%20centro",
+            "menu_id": "8b39b8a5-eff2-4d17-acb0-3bd62781eaca",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "4bcc5dfc-b7ce-4c27-989e-bf02fff90c6d",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-verde-Pescara%20centro",
+            "menu_id": "697996ce-95aa-4474-a1b8-5e917b3ff35a",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "d31fa47a-5677-409f-ab0e-9cee9f4d71b2",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-bowl-Pescara%20centro",
+            "menu_id": "247ac234-b1be-4c68-8fe4-6a097fab811b",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066707
+      },
+      "elapsedMs": 38
+    },
+    {
+      "session": "owner",
+      "action": "view=request&id=a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Pescara centro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z zone isolation Pescara centro",
+          "vegetarian": 0,
+          "pickup_by": 1789817865851,
+          "created": 1789816065851,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "c032c0ef-b235-41d0-84e9-8de5348da365",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-forno-Pescara%20centro",
+            "menu_id": "8b39b8a5-eff2-4d17-acb0-3bd62781eaca",
+            "title": "Focaccia caprese e acqua",
+            "description": "Focaccia con mozzarella, pomodoro e basilico. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 790,
+            "quantity": 1,
+            "ready_at": 1789816605857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Forno · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "4bcc5dfc-b7ce-4c27-989e-bf02fff90c6d",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-verde-Pescara%20centro",
+            "menu_id": "697996ce-95aa-4474-a1b8-5e917b3ff35a",
+            "title": "Cous cous, verdure e acqua",
+            "description": "Cous cous con ceci, zucchine, carote, limone e olio. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789816725857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Verde · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          },
+          {
+            "id": "d31fa47a-5677-409f-ab0e-9cee9f4d71b2",
+            "request_id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+            "venue_id": "arena-demo-bowl-Pescara%20centro",
+            "menu_id": "247ac234-b1be-4c68-8fe4-6a097fab811b",
+            "title": "Bowl di pollo e acqua",
+            "description": "Riso, pollo, pomodorini, mais, carote e salsa yogurt. Acqua 500 ml e confezione incluse. Offerta dimostrativa.",
+            "price": 990,
+            "quantity": 1,
+            "ready_at": 1789816965857,
+            "expires": 1789816245857,
+            "created": 1789816065857,
+            "status": "cancelled",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Bowl · demo",
+            "address": "Punto fittizio · Pescara centro · nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 1
+          }
+        ],
+        "now": 1789816066737
+      },
+      "elapsedMs": 53
+    },
+    {
+      "session": "stranger",
+      "action": "view=request&id=48fa24d2-5c78-4293-95e8-6d623a679e66",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "48fa24d2-5c78-4293-95e8-6d623a679e66",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z stranger session",
+          "vegetarian": 0,
+          "pickup_by": 1789817864155,
+          "created": 1789816064155,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816066804
+      },
+      "elapsedMs": 46
+    },
+    {
+      "session": "stranger",
+      "action": "view=request&id=48fa24d2-5c78-4293-95e8-6d623a679e66",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "48fa24d2-5c78-4293-95e8-6d623a679e66",
+          "budget": 1000,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "ARENA_TEST_2026-09-19T11-07-43-657Z stranger session",
+          "vegetarian": 0,
+          "pickup_by": 1789817864155,
+          "created": 1789816064155,
+          "status": "cancelled",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789816066851
+      },
+      "elapsedMs": 92
+    }
+  ],
+  "cleanup": [
+    {
+      "session": "owner",
+      "id": "1dad6beb-2274-4453-8ecc-4cba25a5c84a",
+      "demo": 1,
+      "status": "collected"
+    },
+    {
+      "session": "owner",
+      "id": "336a64fc-a32f-4f5f-8f82-db703dffd335",
+      "demo": 1,
+      "status": "cancelled"
+    },
+    {
+      "session": "owner",
+      "id": "7c3ccffe-769f-416d-bb0d-d215d3c54583",
+      "demo": 1,
+      "status": "cancelled"
+    },
+    {
+      "session": "owner",
+      "id": "80d0d38f-4f0f-4116-b9e4-d93404f09f57",
+      "demo": 1,
+      "status": "cancelled"
+    },
+    {
+      "session": "owner",
+      "id": "f8738e20-b9ac-4f20-98ad-7c5109051988",
+      "demo": 1,
+      "status": "cancelled"
+    },
+    {
+      "session": "owner",
+      "id": "a22bacd7-d5c8-4d09-8d6d-7604952f0319",
+      "demo": 1,
+      "status": "cancelled"
+    },
+    {
+      "session": "stranger",
+      "id": "48fa24d2-5c78-4293-95e8-6d623a679e66",
+      "demo": 1,
+      "status": "cancelled"
+    }
+  ],
+  "ownerPeakActive": 2,
+  "validOwnerAttestCalls": 0,
+  "cleanupPassed": true,
+  "sourceHashesEnd": {
+    "app/api/passo/route.ts": "75f78add8a5e2dbbb598e8d213a507f061d6f5be7940501d32366168453ca1c7",
+    "app/arena-demo.ts": "3f20e69cc55c2a5b1dd211d07b68a1df8884c9a6670fd91ab013eb918b90dc8b"
+  },
+  "sourceChangedDuringRun": false,
+  "finishedAt": "2026-09-19T11:07:46.906Z",
+  "elapsedMs": 3248,
+  "passed": true
+}

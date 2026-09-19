@@ -1,0 +1,45 @@
+{
+  "source": "C:\\Users\\basfa\\Desktop\\TEAM1\\passo\\app\\api\\passo\\route.ts",
+  "sourceSha256": "75f78add8a5e2dbbb598e8d213a507f061d6f5be7940501d32366168453ca1c7",
+  "sqliteVersion": "3.53.1",
+  "scope": "Current route SQL, actual migration, all data in :memory:, no live DB writes",
+  "elapsedMs": 4,
+  "tests": [
+    {
+      "name": "accept-with-stale-clock-after-stock-reallocated",
+      "passed": true,
+      "newOfferInserted": 1,
+      "expiredAcceptanceRows": 0,
+      "available": 0
+    },
+    {
+      "name": "collect-after-pickup-expired-and-stock-reallocated",
+      "passed": true,
+      "newOfferInserted": 1,
+      "expiredCollectionRows": 0,
+      "stock": 1
+    },
+    {
+      "name": "atomic-request-limit-serialized-d1-writes",
+      "passed": true,
+      "initial": 2,
+      "attempts": 12,
+      "created": 1,
+      "finalCount": 3
+    },
+    {
+      "name": "two-different-offers-competing-for-one-request",
+      "passed": true,
+      "requestUpdateRows": [
+        1,
+        0
+      ],
+      "chosen": "oa",
+      "offers": {
+        "oa": "accepted",
+        "ob": "cancelled"
+      }
+    }
+  ],
+  "passed": true
+}

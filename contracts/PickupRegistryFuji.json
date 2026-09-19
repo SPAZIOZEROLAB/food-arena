@@ -1,0 +1,109 @@
+{
+  "contractName": "PickupRegistryFuji",
+  "compiler": "0.8.30+commit.73712a01.Emscripten.clang",
+  "evmVersion": "paris",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "AlreadyRegistered",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EmptyCommitment",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "WrongChain",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "merchant",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "requestCommitment",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "receiptCommitment",
+          "type": "bytes32"
+        }
+      ],
+      "name": "PickupRegistered",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "FUJI_CHAIN_ID",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "merchant",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "requestCommitment",
+          "type": "bytes32"
+        }
+      ],
+      "name": "receipts",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "receiptCommitment",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "requestCommitment",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "receiptCommitment",
+          "type": "bytes32"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5061a86946146031576040516310dfc03360e01b815260040160405180910390fd5b610203806100406000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80632f92673214610046578063a9abaeb51461005b578063c91eb78614610095575b600080fd5b610059610054366004610173565b61009e565b005b610083610069366004610195565b600060208181529281526040808220909352908152205481565b60405190815260200160405180910390f35b61008361a86981565b61a86946146100c0576040516310dfc03360e01b815260040160405180910390fd5b8115806100cb575080155b156100e957604051635560fe6360e11b815260040160405180910390fd5b336000908152602081815260408083208584529091529020541561012057604051630ea075bf60e21b815260040160405180910390fd5b3360008181526020818152604080832086845282529182902084905590518381528492917fc36aaf337e137362d87bf9b5db8dab7c3dcf3dc8638684a24289a539a861b59e910160405180910390a35050565b6000806040838503121561018657600080fd5b50508035926020909101359150565b600080604083850312156101a857600080fd5b82356001600160a01b03811681146101bf57600080fd5b94602093909301359350505056fea2646970667358221220cf25fdce8e3e56c60a1a2a76e4b10740446f9ed24d9dac7a47e713b11c2d8f2d64736f6c634300081e0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80632f92673214610046578063a9abaeb51461005b578063c91eb78614610095575b600080fd5b610059610054366004610173565b61009e565b005b610083610069366004610195565b600060208181529281526040808220909352908152205481565b60405190815260200160405180910390f35b61008361a86981565b61a86946146100c0576040516310dfc03360e01b815260040160405180910390fd5b8115806100cb575080155b156100e957604051635560fe6360e11b815260040160405180910390fd5b336000908152602081815260408083208584529091529020541561012057604051630ea075bf60e21b815260040160405180910390fd5b3360008181526020818152604080832086845282529182902084905590518381528492917fc36aaf337e137362d87bf9b5db8dab7c3dcf3dc8638684a24289a539a861b59e910160405180910390a35050565b6000806040838503121561018657600080fd5b50508035926020909101359150565b600080604083850312156101a857600080fd5b82356001600160a01b03811681146101bf57600080fd5b94602093909301359350505056fea2646970667358221220cf25fdce8e3e56c60a1a2a76e4b10740446f9ed24d9dac7a47e713b11c2d8f2d64736f6c634300081e0033"
+}

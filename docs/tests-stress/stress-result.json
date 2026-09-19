@@ -1,0 +1,1577 @@
+{
+  "tag": "STRESS_2026-09-19T10-58-18-982Z",
+  "base": "http://localhost:5173",
+  "startedAt": "2026-09-19T10:58:18.983Z",
+  "maxConcurrency": 12,
+  "peakConcurrency": 12,
+  "tests": [
+    {
+      "name": "three-active-requests-same-session",
+      "passed": true,
+      "detail": {
+        "initial": 1,
+        "parallel": 4,
+        "createdInBurst": 2,
+        "active": 3,
+        "statuses": [
+          201,
+          429,
+          429,
+          201
+        ],
+        "errors": [
+          "Hai già tre richieste aperte.",
+          "Hai già tre richieste aperte."
+        ],
+        "limitedByIp": false
+      }
+    },
+    {
+      "name": "last-serving-concurrent-offers",
+      "passed": true,
+      "detail": {
+        "contenders": 3,
+        "statuses": [
+          200,
+          400,
+          400
+        ],
+        "offersCreated": 1,
+        "stock": 1,
+        "available": 0
+      }
+    },
+    {
+      "name": "non-owner-accept-rejected",
+      "passed": true,
+      "detail": {
+        "status": 403
+      }
+    },
+    {
+      "name": "twelve-simultaneous-accepts",
+      "passed": true,
+      "detail": {
+        "successes": 1,
+        "statuses": [
+          400,
+          200,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400
+        ],
+        "requestStatus": "accepted",
+        "chosenMatches": true
+      }
+    },
+    {
+      "name": "pickup-secret-scope",
+      "passed": true,
+      "detail": {
+        "merchantHasCode": false,
+        "anonymousHasCode": false,
+        "ownerHasChosenCode": true
+      }
+    },
+    {
+      "name": "twelve-simultaneous-collections",
+      "passed": true,
+      "detail": {
+        "successes": 1,
+        "statuses": [
+          200,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400,
+          400
+        ],
+        "stock": 0,
+        "available": 0,
+        "requestStatus": "collected"
+      }
+    }
+  ],
+  "requests": [
+    {
+      "action": "/signin-with-chatgpt?return_to=%2Fgestore",
+      "status": 302,
+      "body": {
+        "text": ""
+      },
+      "elapsedMs": 69
+    },
+    {
+      "action": "/api/passo?view=merchant",
+      "status": 200,
+      "body": {
+        "user": "Seedy",
+        "venue": {
+          "id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+          "owner": "[redacted]",
+          "name": "Test locale Passo",
+          "address": "Indirizzo di prova, nessun ritiro reale",
+          "zone": "Università / Viale Pindaro",
+          "phone": "",
+          "demo": 1,
+          "created": 1789814217381
+        },
+        "menu": [
+          {
+            "id": "7becad62-2f37-4a51-bbe7-f4f8ee036cf9",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Panino pollo + acqua",
+            "description": "Pollo e insalata, acqua 500 ml. Piatti di prova, confezione inclusa.",
+            "price": 1000,
+            "stock": 5,
+            "prep": 7,
+            "vegetarian": 0,
+            "active": 1,
+            "updated": 1789814660894,
+            "available": 5
+          },
+          {
+            "id": "3f42b486-424f-471b-8939-968b0124288c",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Piadina alle verdure + acqua",
+            "description": "Piadina con verdure grigliate e formaggio, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 950,
+            "stock": 4,
+            "prep": 5,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660871,
+            "available": 4
+          },
+          {
+            "id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "stock": 5,
+            "prep": 8,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660848,
+            "available": 5
+          },
+          {
+            "id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "stock": 0,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814217404,
+            "available": 0
+          }
+        ],
+        "requests": [],
+        "offers": [
+          {
+            "id": "b9f85091-3b56-4ee2-a8b7-7f94dbfa7340",
+            "request_id": "a19dadba-24f4-4886-8c29-fa5b873028d6",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "title": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789815528199,
+            "expires": 1789815048199,
+            "created": 1789814868199,
+            "status": "collected",
+            "proof_hash": "1870e714abffcf49b81a4d9c0a2617dcb163b4a182c66040154afb87320c896a",
+            "tx_hash": "0x9ac72eb48aca13ec13350e398b253ff0fbd4a0fc9201cc7855455d51482e8755",
+            "wish": "Pasta vegetariana con una bottiglia d’acqua — prova",
+            "budget": 1000,
+            "pickup_by": 1789816435376,
+            "request_status": "collected"
+          },
+          {
+            "id": "19e3ae11-642e-4bdb-9563-459b6e497444",
+            "request_id": "94d3e173-6e2e-4d3d-a4fd-7de484bf965d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "title": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789814457500,
+            "expires": 1789814397500,
+            "created": 1789814217500,
+            "status": "collected",
+            "proof_hash": "494f90143f15a3ced9013538006abf94f7a051740f9dd10f83073f0b0f776030",
+            "tx_hash": "0x6466fe21a10289f9e04e51c45afc7f61b9205fea0ed7d7601eb1bded2cd4e3d2",
+            "wish": "Pranzo vegetariano di prova",
+            "budget": 1000,
+            "pickup_by": 1789816017457,
+            "request_status": "collected"
+          }
+        ]
+      },
+      "elapsedMs": 20
+    },
+    {
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d"
+      },
+      "elapsedMs": 37
+    },
+    {
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "0d027fb0-0c42-4adb-a806-37128c588058"
+      },
+      "elapsedMs": 38
+    },
+    {
+      "action": "request",
+      "status": 429,
+      "body": {
+        "error": "Hai già tre richieste aperte."
+      },
+      "elapsedMs": 40
+    },
+    {
+      "action": "request",
+      "status": 429,
+      "body": {
+        "error": "Hai già tre richieste aperte."
+      },
+      "elapsedMs": 40
+    },
+    {
+      "action": "request",
+      "status": 201,
+      "body": {
+        "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68"
+      },
+      "elapsedMs": 41
+    },
+    {
+      "action": "/api/passo?view=mine",
+      "status": 200,
+      "body": {
+        "requests": [
+          {
+            "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 0",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "0d027fb0-0c42-4adb-a806-37128c588058",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 3",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+            "vegetarian": 1,
+            "pickup_by": 1789817299139,
+            "created": 1789815499139,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          }
+        ]
+      },
+      "elapsedMs": 43
+    },
+    {
+      "action": "menu",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 28
+    },
+    {
+      "action": "/api/passo?view=merchant",
+      "status": 200,
+      "body": {
+        "user": "Seedy",
+        "venue": {
+          "id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+          "owner": "[redacted]",
+          "name": "Test locale Passo",
+          "address": "Indirizzo di prova, nessun ritiro reale",
+          "zone": "Università / Viale Pindaro",
+          "phone": "",
+          "demo": 1,
+          "created": 1789814217381
+        },
+        "menu": [
+          {
+            "id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "stock": 1,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789815499250,
+            "available": 1
+          },
+          {
+            "id": "7becad62-2f37-4a51-bbe7-f4f8ee036cf9",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Panino pollo + acqua",
+            "description": "Pollo e insalata, acqua 500 ml. Piatti di prova, confezione inclusa.",
+            "price": 1000,
+            "stock": 5,
+            "prep": 7,
+            "vegetarian": 0,
+            "active": 1,
+            "updated": 1789814660894,
+            "available": 5
+          },
+          {
+            "id": "3f42b486-424f-471b-8939-968b0124288c",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Piadina alle verdure + acqua",
+            "description": "Piadina con verdure grigliate e formaggio, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 950,
+            "stock": 4,
+            "prep": 5,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660871,
+            "available": 4
+          },
+          {
+            "id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "stock": 5,
+            "prep": 8,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660848,
+            "available": 5
+          },
+          {
+            "id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "stock": 0,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814217404,
+            "available": 0
+          }
+        ],
+        "requests": [
+          {
+            "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 0",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "0d027fb0-0c42-4adb-a806-37128c588058",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 3",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+            "vegetarian": 1,
+            "pickup_by": 1789817299139,
+            "created": 1789815499139,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          }
+        ],
+        "offers": [
+          {
+            "id": "b9f85091-3b56-4ee2-a8b7-7f94dbfa7340",
+            "request_id": "a19dadba-24f4-4886-8c29-fa5b873028d6",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "title": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789815528199,
+            "expires": 1789815048199,
+            "created": 1789814868199,
+            "status": "collected",
+            "proof_hash": "1870e714abffcf49b81a4d9c0a2617dcb163b4a182c66040154afb87320c896a",
+            "tx_hash": "0x9ac72eb48aca13ec13350e398b253ff0fbd4a0fc9201cc7855455d51482e8755",
+            "wish": "Pasta vegetariana con una bottiglia d’acqua — prova",
+            "budget": 1000,
+            "pickup_by": 1789816435376,
+            "request_status": "collected"
+          },
+          {
+            "id": "19e3ae11-642e-4bdb-9563-459b6e497444",
+            "request_id": "94d3e173-6e2e-4d3d-a4fd-7de484bf965d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "title": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789814457500,
+            "expires": 1789814397500,
+            "created": 1789814217500,
+            "status": "collected",
+            "proof_hash": "494f90143f15a3ced9013538006abf94f7a051740f9dd10f83073f0b0f776030",
+            "tx_hash": "0x6466fe21a10289f9e04e51c45afc7f61b9205fea0ed7d7601eb1bded2cd4e3d2",
+            "wish": "Pranzo vegetariano di prova",
+            "budget": 1000,
+            "pickup_by": 1789816017457,
+            "request_status": "collected"
+          }
+        ]
+      },
+      "elapsedMs": 43
+    },
+    {
+      "action": "offer",
+      "status": 400,
+      "body": {
+        "error": "Hai già risposto oppure la quantità è appena stata riservata."
+      },
+      "elapsedMs": 37
+    },
+    {
+      "action": "offer",
+      "status": 400,
+      "body": {
+        "error": "Hai già risposto oppure la quantità è appena stata riservata."
+      },
+      "elapsedMs": 38
+    },
+    {
+      "action": "offer",
+      "status": 200,
+      "body": {
+        "id": "e6554592-c29a-4596-b5c2-cabbe7791303"
+      },
+      "elapsedMs": 39
+    },
+    {
+      "action": "/api/passo?view=merchant",
+      "status": 200,
+      "body": {
+        "user": "Seedy",
+        "venue": {
+          "id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+          "owner": "[redacted]",
+          "name": "Test locale Passo",
+          "address": "Indirizzo di prova, nessun ritiro reale",
+          "zone": "Università / Viale Pindaro",
+          "phone": "",
+          "demo": 1,
+          "created": 1789814217381
+        },
+        "menu": [
+          {
+            "id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "stock": 1,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789815499250,
+            "available": 0
+          },
+          {
+            "id": "7becad62-2f37-4a51-bbe7-f4f8ee036cf9",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Panino pollo + acqua",
+            "description": "Pollo e insalata, acqua 500 ml. Piatti di prova, confezione inclusa.",
+            "price": 1000,
+            "stock": 5,
+            "prep": 7,
+            "vegetarian": 0,
+            "active": 1,
+            "updated": 1789814660894,
+            "available": 5
+          },
+          {
+            "id": "3f42b486-424f-471b-8939-968b0124288c",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Piadina alle verdure + acqua",
+            "description": "Piadina con verdure grigliate e formaggio, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 950,
+            "stock": 4,
+            "prep": 5,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660871,
+            "available": 4
+          },
+          {
+            "id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "stock": 5,
+            "prep": 8,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660848,
+            "available": 5
+          },
+          {
+            "id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "stock": 0,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814217404,
+            "available": 0
+          }
+        ],
+        "requests": [
+          {
+            "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 0",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "0d027fb0-0c42-4adb-a806-37128c588058",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 3",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+            "vegetarian": 1,
+            "pickup_by": 1789817299139,
+            "created": 1789815499139,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          }
+        ],
+        "offers": [
+          {
+            "id": "e6554592-c29a-4596-b5c2-cabbe7791303",
+            "request_id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "title": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "quantity": 1,
+            "ready_at": 1789815739323,
+            "expires": 1789815679323,
+            "created": 1789815499323,
+            "status": "offered",
+            "proof_hash": null,
+            "tx_hash": null,
+            "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+            "budget": 1800,
+            "pickup_by": 1789817299139,
+            "request_status": "open"
+          },
+          {
+            "id": "b9f85091-3b56-4ee2-a8b7-7f94dbfa7340",
+            "request_id": "a19dadba-24f4-4886-8c29-fa5b873028d6",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "title": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789815528199,
+            "expires": 1789815048199,
+            "created": 1789814868199,
+            "status": "collected",
+            "proof_hash": "1870e714abffcf49b81a4d9c0a2617dcb163b4a182c66040154afb87320c896a",
+            "tx_hash": "0x9ac72eb48aca13ec13350e398b253ff0fbd4a0fc9201cc7855455d51482e8755",
+            "wish": "Pasta vegetariana con una bottiglia d’acqua — prova",
+            "budget": 1000,
+            "pickup_by": 1789816435376,
+            "request_status": "collected"
+          },
+          {
+            "id": "19e3ae11-642e-4bdb-9563-459b6e497444",
+            "request_id": "94d3e173-6e2e-4d3d-a4fd-7de484bf965d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "title": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789814457500,
+            "expires": 1789814397500,
+            "created": 1789814217500,
+            "status": "collected",
+            "proof_hash": "494f90143f15a3ced9013538006abf94f7a051740f9dd10f83073f0b0f776030",
+            "tx_hash": "0x6466fe21a10289f9e04e51c45afc7f61b9205fea0ed7d7601eb1bded2cd4e3d2",
+            "wish": "Pranzo vegetariano di prova",
+            "budget": 1000,
+            "pickup_by": 1789816017457,
+            "request_status": "collected"
+          }
+        ]
+      },
+      "elapsedMs": 22
+    },
+    {
+      "action": "accept",
+      "status": 403,
+      "body": {
+        "error": "Apri la richiesta dal dispositivo che l’ha creata."
+      },
+      "elapsedMs": 36
+    },
+    {
+      "action": "accept",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 83
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "Un’altra scelta è già stata registrata."
+      },
+      "elapsedMs": 84
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "Un’altra scelta è già stata registrata."
+      },
+      "elapsedMs": 83
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "Un’altra scelta è già stata registrata."
+      },
+      "elapsedMs": 84
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "Un’altra scelta è già stata registrata."
+      },
+      "elapsedMs": 84
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "La richiesta è già stata chiusa."
+      },
+      "elapsedMs": 98
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "La richiesta è già stata chiusa."
+      },
+      "elapsedMs": 98
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "La richiesta è già stata chiusa."
+      },
+      "elapsedMs": 97
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "La richiesta è già stata chiusa."
+      },
+      "elapsedMs": 98
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "La richiesta è già stata chiusa."
+      },
+      "elapsedMs": 97
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "La richiesta è già stata chiusa."
+      },
+      "elapsedMs": 98
+    },
+    {
+      "action": "accept",
+      "status": 400,
+      "body": {
+        "error": "La richiesta è già stata chiusa."
+      },
+      "elapsedMs": 98
+    },
+    {
+      "action": "/api/passo?view=request&id=30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+          "budget": 1800,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+          "vegetarian": 1,
+          "pickup_by": 1789817299139,
+          "created": 1789815499139,
+          "status": "accepted",
+          "chosen": "e6554592-c29a-4596-b5c2-cabbe7791303",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "e6554592-c29a-4596-b5c2-cabbe7791303",
+            "request_id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "title": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "quantity": 1,
+            "ready_at": 1789815739323,
+            "expires": 1789815679323,
+            "created": 1789815499323,
+            "status": "accepted",
+            "code": "[redacted]",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Test locale Passo",
+            "address": "Indirizzo di prova, nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 0
+          }
+        ],
+        "now": 1789815499535
+      },
+      "elapsedMs": 41
+    },
+    {
+      "action": "/api/passo?view=merchant",
+      "status": 200,
+      "body": {
+        "user": "Seedy",
+        "venue": {
+          "id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+          "owner": "[redacted]",
+          "name": "Test locale Passo",
+          "address": "Indirizzo di prova, nessun ritiro reale",
+          "zone": "Università / Viale Pindaro",
+          "phone": "",
+          "demo": 1,
+          "created": 1789814217381
+        },
+        "menu": [
+          {
+            "id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "stock": 1,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789815499250,
+            "available": 0
+          },
+          {
+            "id": "7becad62-2f37-4a51-bbe7-f4f8ee036cf9",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Panino pollo + acqua",
+            "description": "Pollo e insalata, acqua 500 ml. Piatti di prova, confezione inclusa.",
+            "price": 1000,
+            "stock": 5,
+            "prep": 7,
+            "vegetarian": 0,
+            "active": 1,
+            "updated": 1789814660894,
+            "available": 5
+          },
+          {
+            "id": "3f42b486-424f-471b-8939-968b0124288c",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Piadina alle verdure + acqua",
+            "description": "Piadina con verdure grigliate e formaggio, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 950,
+            "stock": 4,
+            "prep": 5,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660871,
+            "available": 4
+          },
+          {
+            "id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "stock": 5,
+            "prep": 8,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660848,
+            "available": 5
+          },
+          {
+            "id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "stock": 0,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814217404,
+            "available": 0
+          }
+        ],
+        "requests": [
+          {
+            "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 0",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "0d027fb0-0c42-4adb-a806-37128c588058",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 3",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          }
+        ],
+        "offers": [
+          {
+            "id": "e6554592-c29a-4596-b5c2-cabbe7791303",
+            "request_id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "title": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "quantity": 1,
+            "ready_at": 1789815739323,
+            "expires": 1789815679323,
+            "created": 1789815499323,
+            "status": "accepted",
+            "proof_hash": null,
+            "tx_hash": null,
+            "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+            "budget": 1800,
+            "pickup_by": 1789817299139,
+            "request_status": "accepted"
+          },
+          {
+            "id": "b9f85091-3b56-4ee2-a8b7-7f94dbfa7340",
+            "request_id": "a19dadba-24f4-4886-8c29-fa5b873028d6",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "title": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789815528199,
+            "expires": 1789815048199,
+            "created": 1789814868199,
+            "status": "collected",
+            "proof_hash": "1870e714abffcf49b81a4d9c0a2617dcb163b4a182c66040154afb87320c896a",
+            "tx_hash": "0x9ac72eb48aca13ec13350e398b253ff0fbd4a0fc9201cc7855455d51482e8755",
+            "wish": "Pasta vegetariana con una bottiglia d’acqua — prova",
+            "budget": 1000,
+            "pickup_by": 1789816435376,
+            "request_status": "collected"
+          },
+          {
+            "id": "19e3ae11-642e-4bdb-9563-459b6e497444",
+            "request_id": "94d3e173-6e2e-4d3d-a4fd-7de484bf965d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "title": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789814457500,
+            "expires": 1789814397500,
+            "created": 1789814217500,
+            "status": "collected",
+            "proof_hash": "494f90143f15a3ced9013538006abf94f7a051740f9dd10f83073f0b0f776030",
+            "tx_hash": "0x6466fe21a10289f9e04e51c45afc7f61b9205fea0ed7d7601eb1bded2cd4e3d2",
+            "wish": "Pranzo vegetariano di prova",
+            "budget": 1000,
+            "pickup_by": 1789816017457,
+            "request_status": "collected"
+          }
+        ]
+      },
+      "elapsedMs": 37
+    },
+    {
+      "action": "/api/passo?view=request&id=30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+          "budget": 1800,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+          "vegetarian": 1,
+          "pickup_by": 1789817299139,
+          "created": 1789815499139,
+          "status": "accepted",
+          "chosen": "e6554592-c29a-4596-b5c2-cabbe7791303",
+          "demo": 1
+        },
+        "mine": false,
+        "offers": [
+          {
+            "id": "e6554592-c29a-4596-b5c2-cabbe7791303",
+            "request_id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "title": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "quantity": 1,
+            "ready_at": 1789815739323,
+            "expires": 1789815679323,
+            "created": 1789815499323,
+            "status": "accepted",
+            "proof_hash": null,
+            "tx_hash": null,
+            "venue_name": "Test locale Passo",
+            "address": "Indirizzo di prova, nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 0
+          }
+        ],
+        "now": 1789815499618
+      },
+      "elapsedMs": 48
+    },
+    {
+      "action": "collect",
+      "status": 200,
+      "body": {
+        "ok": true,
+        "proofHash": "148711bd5a248a80f50713cd6212658fc5ba178125a9ab1af94f6d7d87cfc09d"
+      },
+      "elapsedMs": 114
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 113
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 114
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 115
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 115
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 115
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 116
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 116
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 118
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 118
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 119
+    },
+    {
+      "action": "collect",
+      "status": 400,
+      "body": {
+        "error": "Ritiro già registrato o quantità non valida."
+      },
+      "elapsedMs": 119
+    },
+    {
+      "action": "/api/passo?view=merchant",
+      "status": 200,
+      "body": {
+        "user": "Seedy",
+        "venue": {
+          "id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+          "owner": "[redacted]",
+          "name": "Test locale Passo",
+          "address": "Indirizzo di prova, nessun ritiro reale",
+          "zone": "Università / Viale Pindaro",
+          "phone": "",
+          "demo": 1,
+          "created": 1789814217381
+        },
+        "menu": [
+          {
+            "id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "stock": 0,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789815499250,
+            "available": 0
+          },
+          {
+            "id": "7becad62-2f37-4a51-bbe7-f4f8ee036cf9",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Panino pollo + acqua",
+            "description": "Pollo e insalata, acqua 500 ml. Piatti di prova, confezione inclusa.",
+            "price": 1000,
+            "stock": 5,
+            "prep": 7,
+            "vegetarian": 0,
+            "active": 1,
+            "updated": 1789814660894,
+            "available": 5
+          },
+          {
+            "id": "3f42b486-424f-471b-8939-968b0124288c",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Piadina alle verdure + acqua",
+            "description": "Piadina con verdure grigliate e formaggio, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 950,
+            "stock": 4,
+            "prep": 5,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660871,
+            "available": 4
+          },
+          {
+            "id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "stock": 5,
+            "prep": 8,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814660848,
+            "available": 5
+          },
+          {
+            "id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "name": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "stock": 0,
+            "prep": 1,
+            "vegetarian": 1,
+            "active": 1,
+            "updated": 1789814217404,
+            "available": 0
+          }
+        ],
+        "requests": [
+          {
+            "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 0",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          },
+          {
+            "id": "0d027fb0-0c42-4adb-a806-37128c588058",
+            "budget": 1800,
+            "quantity": 1,
+            "zone": "Università / Viale Pindaro",
+            "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 3",
+            "vegetarian": 1,
+            "pickup_by": 1789817299168,
+            "created": 1789815499168,
+            "status": "open",
+            "chosen": null,
+            "demo": 1
+          }
+        ],
+        "offers": [
+          {
+            "id": "e6554592-c29a-4596-b5c2-cabbe7791303",
+            "request_id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "title": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "quantity": 1,
+            "ready_at": 1789815739323,
+            "expires": 1789815679323,
+            "created": 1789815499323,
+            "status": "collected",
+            "proof_hash": "148711bd5a248a80f50713cd6212658fc5ba178125a9ab1af94f6d7d87cfc09d",
+            "tx_hash": null,
+            "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+            "budget": 1800,
+            "pickup_by": 1789817299139,
+            "request_status": "collected"
+          },
+          {
+            "id": "b9f85091-3b56-4ee2-a8b7-7f94dbfa7340",
+            "request_id": "a19dadba-24f4-4886-8c29-fa5b873028d6",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4f2cdec1-dd5e-491c-b2e0-9384ed9d0e2d",
+            "title": "Pasta al pomodoro + acqua",
+            "description": "Pasta calda al pomodoro, acqua 500 ml. Confezione inclusa. Piatti di prova.",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789815528199,
+            "expires": 1789815048199,
+            "created": 1789814868199,
+            "status": "collected",
+            "proof_hash": "1870e714abffcf49b81a4d9c0a2617dcb163b4a182c66040154afb87320c896a",
+            "tx_hash": "0x9ac72eb48aca13ec13350e398b253ff0fbd4a0fc9201cc7855455d51482e8755",
+            "wish": "Pasta vegetariana con una bottiglia d’acqua — prova",
+            "budget": 1000,
+            "pickup_by": 1789816435376,
+            "request_status": "collected"
+          },
+          {
+            "id": "19e3ae11-642e-4bdb-9563-459b6e497444",
+            "request_id": "94d3e173-6e2e-4d3d-a4fd-7de484bf965d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "c251bf8a-ca14-44eb-93c3-0186f00a6459",
+            "title": "Pasta test 1789814217390",
+            "description": "Pasta vegetariana, confezione inclusa",
+            "price": 850,
+            "quantity": 1,
+            "ready_at": 1789814457500,
+            "expires": 1789814397500,
+            "created": 1789814217500,
+            "status": "collected",
+            "proof_hash": "494f90143f15a3ced9013538006abf94f7a051740f9dd10f83073f0b0f776030",
+            "tx_hash": "0x6466fe21a10289f9e04e51c45afc7f61b9205fea0ed7d7601eb1bded2cd4e3d2",
+            "wish": "Pranzo vegetariano di prova",
+            "budget": 1000,
+            "pickup_by": 1789816017457,
+            "request_status": "collected"
+          }
+        ]
+      },
+      "elapsedMs": 61
+    },
+    {
+      "action": "/api/passo?view=request&id=30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+          "budget": 1800,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+          "vegetarian": 1,
+          "pickup_by": 1789817299139,
+          "created": 1789815499139,
+          "status": "collected",
+          "chosen": "e6554592-c29a-4596-b5c2-cabbe7791303",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "e6554592-c29a-4596-b5c2-cabbe7791303",
+            "request_id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "title": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "quantity": 1,
+            "ready_at": 1789815739323,
+            "expires": 1789815679323,
+            "created": 1789815499323,
+            "status": "collected",
+            "code": "[redacted]",
+            "proof_hash": "148711bd5a248a80f50713cd6212658fc5ba178125a9ab1af94f6d7d87cfc09d",
+            "tx_hash": null,
+            "venue_name": "Test locale Passo",
+            "address": "Indirizzo di prova, nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 0
+          }
+        ],
+        "now": 1789815499840
+      },
+      "elapsedMs": 37
+    },
+    {
+      "action": "/api/passo?view=request&id=30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+          "budget": 1800,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "STRESS_2026-09-19T10-58-18-982Z pranzo vegetariano TEST",
+          "vegetarian": 1,
+          "pickup_by": 1789817299139,
+          "created": 1789815499139,
+          "status": "collected",
+          "chosen": "e6554592-c29a-4596-b5c2-cabbe7791303",
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [
+          {
+            "id": "e6554592-c29a-4596-b5c2-cabbe7791303",
+            "request_id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+            "venue_id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+            "menu_id": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+            "title": "STRESS_2026-09-19T10-58-18-982Z ultima porzione",
+            "description": "Piatto vegetariano fittizio. Test tecnico locale, non acquistabile.",
+            "price": 600,
+            "quantity": 1,
+            "ready_at": 1789815739323,
+            "expires": 1789815679323,
+            "created": 1789815499323,
+            "status": "collected",
+            "code": "[redacted]",
+            "proof_hash": "148711bd5a248a80f50713cd6212658fc5ba178125a9ab1af94f6d7d87cfc09d",
+            "tx_hash": null,
+            "venue_name": "Test locale Passo",
+            "address": "Indirizzo di prova, nessun ritiro reale",
+            "phone": "",
+            "demo": 1,
+            "scripted": 0
+          }
+        ],
+        "now": 1789815499873
+      },
+      "elapsedMs": 29
+    },
+    {
+      "action": "/api/passo?view=request&id=36bc1f18-fe00-4d37-9464-b8db9da2da68",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+          "budget": 1800,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 0",
+          "vegetarian": 1,
+          "pickup_by": 1789817299168,
+          "created": 1789815499168,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789815499897
+      },
+      "elapsedMs": 25
+    },
+    {
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 45
+    },
+    {
+      "action": "/api/passo?view=request&id=0d027fb0-0c42-4adb-a806-37128c588058",
+      "status": 200,
+      "body": {
+        "request": {
+          "id": "0d027fb0-0c42-4adb-a806-37128c588058",
+          "budget": 1800,
+          "quantity": 1,
+          "zone": "Università / Viale Pindaro",
+          "wish": "STRESS_2026-09-19T10-58-18-982Z session cap candidate 3",
+          "vegetarian": 1,
+          "pickup_by": 1789817299168,
+          "created": 1789815499168,
+          "status": "open",
+          "chosen": null,
+          "demo": 1
+        },
+        "mine": true,
+        "offers": [],
+        "now": 1789815499968
+      },
+      "elapsedMs": 29
+    },
+    {
+      "action": "cancel",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 31
+    },
+    {
+      "action": "pauseMenu",
+      "status": 200,
+      "body": {
+        "ok": true
+      },
+      "elapsedMs": 26
+    }
+  ],
+  "createdRequestIds": [
+    "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+    "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+    "0d027fb0-0c42-4adb-a806-37128c588058"
+  ],
+  "createdMenuIds": [
+    "4d852f0e-fb7a-42bc-8c89-05b292e79d74"
+  ],
+  "cleanup": [
+    {
+      "requestId": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+      "keptStatus": "collected"
+    },
+    {
+      "requestId": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+      "action": "cancel",
+      "status": 200
+    },
+    {
+      "requestId": "0d027fb0-0c42-4adb-a806-37128c588058",
+      "action": "cancel",
+      "status": 200
+    },
+    {
+      "menuId": "4d852f0e-fb7a-42bc-8c89-05b292e79d74",
+      "action": "pause",
+      "status": 200
+    }
+  ],
+  "sourceSha256": "75f78add8a5e2dbbb598e8d213a507f061d6f5be7940501d32366168453ca1c7",
+  "demoVenue": {
+    "id": "2db81419-f3d6-4c98-a349-0ab0c0bbf615",
+    "name": "Test locale Passo",
+    "demo": 1,
+    "zone": "Università / Viale Pindaro"
+  },
+  "finishedAt": "2026-09-19T10:58:20.033Z",
+  "elapsedMs": 1050,
+  "limitedByIp": false,
+  "sourceSha256End": "75f78add8a5e2dbbb598e8d213a507f061d6f5be7940501d32366168453ca1c7",
+  "sourceChangedDuringRun": false,
+  "passed": true,
+  "cleanupVerified": {
+    "checkedAt": "2026-09-19T11:00:58.133Z",
+    "activeOwnMenus": [],
+    "tickets": [
+      {
+        "id": "30bb0d65-ece6-4d63-bd00-25a5ce4ab12d",
+        "demo": 1,
+        "status": "collected"
+      },
+      {
+        "id": "36bc1f18-fe00-4d37-9464-b8db9da2da68",
+        "demo": 1,
+        "status": "cancelled"
+      },
+      {
+        "id": "0d027fb0-0c42-4adb-a806-37128c588058",
+        "demo": 1,
+        "status": "cancelled"
+      }
+    ],
+    "passed": true
+  }
+}

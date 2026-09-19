@@ -1,0 +1,2826 @@
+{
+  "startedAt": "2026-09-19T10:25:39.899Z",
+  "library": "@huggingface/transformers@3.8.1",
+  "requests": [
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:62747/",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:62747/lunch-ranker.worker.js",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer.json",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/tokenizer_config.json",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/config.json",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/paraphrase-multilingual-MiniLM-L12-v2/2c4055b12046f11709e9df2c122e59ffbdc2f900/config.json?%2FXenova%2Fparaphrase-multilingual-MiniLM-L12-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%22ce7fe159b2eee53ef2b9704a72a4efa6c22248b4%22",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://huggingface.co/api/resolve-cache/models/Xenova/paraphrase-multilingual-MiniLM-L12-v2/2c4055b12046f11709e9df2c122e59ffbdc2f900/tokenizer_config.json?%2FXenova%2Fparaphrase-multilingual-MiniLM-L12-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%229f3bfd538ec86d360dc988dac25e3cfb0c4c14d5%22",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/64623c13d290a75bd98bdc54/fe584e09808b408472e9556eb0d8db4b797690702ab6f43ad18e59f5b5b2cd10?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27tokenizer.json%3B+filename%3D%22tokenizer.json%22%3B&response-content-type=application%2Fjson%3B+charset%3Dutf-8&user_id=public&X-Xet-Cas-Uid=public&Expires=1789817141&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjQ2MjNjMTNkMjkwYTc1YmQ5OGJkYzU0L2ZlNTg0ZTA5ODA4YjQwODQ3MmU5NTU2ZWIwZDhkYjRiNzk3NjkwNzAyYWI2ZjQzYWQxOGU1OWY1YjViMmNkMTBcXD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWlubGluZSUzQitmaWxlbmFtZSUyQSUzRFVURi04JTI3JTI3dG9rZW5pemVyLmpzb24lM0IrZmlsZW5hbWUlM0QlMjJ0b2tlbml6ZXIuanNvbiUyMiUzQiZyZXNwb25zZS1jb250ZW50LXR5cGU9YXBwbGljYXRpb24lMkZqc29uJTNCK2NoYXJzZXQlM0R1dGYtOCZ1c2VyX2lkPXB1YmxpYyZYLVhldC1DYXMtVWlkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzg5ODE3MTQxfX19XX0_&Signature=MEUCICK8x6I-ft8XyTS5xwXMTksyudSonJFEEsLWM9YgjJhEAiEAzYR2fMwHs-zrJWMmCj5EL7LyrZwfGHPl7yJBo6PNlbs_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2/resolve/main/onnx/model_quantized.onnx",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://us.aws.cdn.hf.co/xet-bridge-us/64623c13d290a75bd98bdc54/1bdde20dc7b6cefb4b4f81ef3d1f8c3090d8db5a452fd1db9fbfdc0dab422105?X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model_quantized.onnx%3B+filename%3D%22model_quantized.onnx%22%3B&user_id=public&Expires=1789817141&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy5hd3MuY2RuLmhmLmNvL3hldC1icmlkZ2UtdXMvNjQ2MjNjMTNkMjkwYTc1YmQ5OGJkYzU0LzFiZGRlMjBkYzdiNmNlZmI0YjRmODFlZjNkMWY4YzMwOTBkOGRiNWE0NTJmZDFkYjlmYmZkYzBkYWI0MjIxMDVcXD9YLVhldC1DYXMtVWlkPXB1YmxpYyZyZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPWlubGluZSUzQitmaWxlbmFtZSUyQSUzRFVURi04JTI3JTI3bW9kZWxfcXVhbnRpemVkLm9ubnglM0IrZmlsZW5hbWUlM0QlMjJtb2RlbF9xdWFudGl6ZWQub25ueCUyMiUzQiZ1c2VyX2lkPXB1YmxpYyIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiRXBvY2hUaW1lIjoxNzg5ODE3MTQxfX19XX0_&Signature=MEUCIQCWVFOFHi-6kmYMdUVRL%7EJLfNcHU2-HwtyCWoxWxdzcBQIgQySLjx3Wn%7EIVEhASQzyI9%7EzCrQtXLTqSA0vqHw3Rchk_&Key-Pair-Id=01KXEF4KZ1B6FV465MAWR4M21F&Hash-Algorithm=SHA256",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.mjs",
+      "postData": null
+    },
+    {
+      "method": "GET",
+      "url": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/ort-wasm-simd-threaded.jsep.wasm",
+      "postData": null
+    }
+  ],
+  "requestFailures": [],
+  "browserErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "tests": [
+    {
+      "name": "real-model-cold-start",
+      "result": {
+        "type": "result",
+        "id": "cold-start",
+        "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+        "dtype": "q8",
+        "device": "wasm",
+        "local": true,
+        "scores": [
+          {
+            "id": "insalata",
+            "score": 0.8028425349192132
+          },
+          {
+            "id": "pastapomod",
+            "score": 0.730577090117147
+          },
+          {
+            "id": "bistecca",
+            "score": 0.6209449285055223
+          }
+        ],
+        "order": [
+          "insalata",
+          "pastapomod",
+          "bistecca"
+        ],
+        "timings": {
+          "initializationMs": 33106,
+          "inferenceMs": 219,
+          "totalMs": 33325,
+          "modelWasReady": false
+        }
+      }
+    },
+    {
+      "name": "offline-after-load",
+      "result": {
+        "type": "result",
+        "id": "offline-warm",
+        "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+        "dtype": "q8",
+        "device": "wasm",
+        "local": true,
+        "scores": [
+          {
+            "id": "bistecca",
+            "score": 0.761360611903087
+          },
+          {
+            "id": "pastapomod",
+            "score": 0.45007184549137935
+          },
+          {
+            "id": "insalata",
+            "score": 0.4028823846632344
+          }
+        ],
+        "order": [
+          "bistecca",
+          "pastapomod",
+          "insalata"
+        ],
+        "timings": {
+          "initializationMs": 0,
+          "inferenceMs": 123,
+          "totalMs": 123,
+          "modelWasReady": true
+        }
+      },
+      "requestsDuringInference": 0
+    },
+    {
+      "name": "invalid-input-explicit-error",
+      "result": {
+        "type": "error",
+        "id": "invalid",
+        "code": "INVALID_INPUT",
+        "message": "Scrivi una richiesta pranzo fra 1 e 2000 caratteri.",
+        "detail": "Scrivi una richiesta pranzo fra 1 e 2000 caratteri.",
+        "stage": "validation",
+        "local": true,
+        "retryable": false
+      }
+    },
+    {
+      "name": "blocked-model-explicit-error",
+      "result": {
+        "type": "error",
+        "id": "blocked-cdn",
+        "code": "MODEL_LOAD_FAILED",
+        "message": "AI locale non disponibile. Nessun ordinamento AI prodotto.",
+        "detail": "Failed to fetch dynamically imported module: https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.8.1/dist/transformers.min.js",
+        "stage": "initialization",
+        "local": true,
+        "retryable": true
+      }
+    }
+  ],
+  "browserVersion": "153.0.4234.32",
+  "semanticCaveat": "Il modello antepone insalata fredda alla pasta calda: il ranking semantico non deve sostituire filtri rigidi caldo/vegetariano.",
+  "events": [
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "library",
+      "status": "loading"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "initiate",
+      "file": "tokenizer.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "initiate",
+      "file": "tokenizer_config.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "initiate",
+      "file": "config.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "download",
+      "file": "config.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "config.json",
+      "progress": 100,
+      "loaded": 673,
+      "total": 673
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "done",
+      "file": "config.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "initiate",
+      "file": "onnx/model_quantized.onnx"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "download",
+      "file": "tokenizer_config.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer_config.json",
+      "progress": 100,
+      "loaded": 496,
+      "total": 496
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "done",
+      "file": "tokenizer_config.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "download",
+      "file": "tokenizer.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "download",
+      "file": "onnx/model_quantized.onnx"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 0.09515941455652206,
+      "loaded": 16256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 0.8620075510540854,
+      "loaded": 147256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 0.013840976569944147,
+      "loaded": 16375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 2.01227975580043,
+      "loaded": 343756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 0.15225074226938562,
+      "loaded": 180125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 2.970839926422385,
+      "loaded": 507506,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 0.3183424611087154,
+      "loaded": 376625,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 4.216968148230926,
+      "loaded": 720381,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 0.48443417994804516,
+      "loaded": 573125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 5.36724035297727,
+      "loaded": 916881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 0.6228439456474866,
+      "loaded": 736875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 6.3258005235992245,
+      "loaded": 1080631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 0.7889356644868164,
+      "loaded": 933375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 7.380216711283374,
+      "loaded": 1260756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 0.9688683598960903,
+      "loaded": 1146250,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 8.722200950154111,
+      "loaded": 1490006,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 1.1488010553053642,
+      "loaded": 1359125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 9.968329171962651,
+      "loaded": 1702881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 1.314892774144694,
+      "loaded": 1555625,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 11.118601376708996,
+      "loaded": 1899381,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 1.508666446123912,
+      "loaded": 1784875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 12.276313764520138,
+      "loaded": 2097152,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 1.7024401181031303,
+      "loaded": 2014125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 13.802569854450466,
+      "loaded": 2357881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 1.9377367197921807,
+      "loaded": 2292500,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 15.336266127445594,
+      "loaded": 2619881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 2.173033321481231,
+      "loaded": 2570875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 17.06167443456511,
+      "loaded": 2914631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 2.3944889466003376,
+      "loaded": 2832875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 18.59537070756024,
+      "loaded": 3176631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 2.615944571719444,
+      "loaded": 3094875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 20.22492299761756,
+      "loaded": 3455006,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 2.7681953139888296,
+      "loaded": 3275000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 21.4710512194261,
+      "loaded": 3667881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 3.0450148453877124,
+      "loaded": 3602500,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 23.100603509483424,
+      "loaded": 3946256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 3.2941524236467066,
+      "loaded": 3897250,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 24.730155799540746,
+      "loaded": 4224631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 3.4602441424860366,
+      "loaded": 4093750,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 26.072140038411483,
+      "loaded": 4453881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 3.6401768378953108,
+      "loaded": 4306625,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 28.085116396717584,
+      "loaded": 4797756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 3.9585192990040263,
+      "loaded": 4683250,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 29.522956652650517,
+      "loaded": 5043381,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 4.1384519944133,
+      "loaded": 4896125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 31.15250894270784,
+      "loaded": 5321756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 4.429112502382127,
+      "loaded": 5240000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 32.97377326688955,
+      "loaded": 5632881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 4.692091057211066,
+      "loaded": 5551125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 34.60332555694687,
+      "loaded": 5911256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 4.899705705760228,
+      "loaded": 5796750,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 35.753597761693214,
+      "loaded": 6107756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 5.148843284019223,
+      "loaded": 6091500,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 37.47900606881274,
+      "loaded": 6402506,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 5.287253049718664,
+      "loaded": 6255250,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 38.43756623943469,
+      "loaded": 6566256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 5.508708674837771,
+      "loaded": 6517250,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 40.16297454655421,
+      "loaded": 6861006,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 5.688641370247045,
+      "loaded": 6730125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 41.21739073423836,
+      "loaded": 7041131,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 5.979301878215872,
+      "loaded": 7074000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 43.422079126668855,
+      "loaded": 7417756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 6.2145984799049225,
+      "loaded": 7352375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 45.53091150203715,
+      "loaded": 7778006,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 6.449895081593973,
+      "loaded": 7630750,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 46.39361565559691,
+      "loaded": 7925381,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 6.768237542702687,
+      "loaded": 8007375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 49.077584133338384,
+      "loaded": 8383881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 6.9758521912518505,
+      "loaded": 8253000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 50.51542438927131,
+      "loaded": 8629506,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 7.14194391009118,
+      "loaded": 8449500,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 52.24083269639084,
+      "loaded": 8924256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 7.418763441490063,
+      "loaded": 8777000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 53.77452896938596,
+      "loaded": 9186256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 7.640219066609169,
+      "loaded": 9039000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 55.212369225318895,
+      "loaded": 9431881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 7.861674691728275,
+      "loaded": 9301000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 56.74606549831401,
+      "loaded": 9693881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 8.096971293417326,
+      "loaded": 9579375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 58.27976177130915,
+      "loaded": 9955881,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 8.304585941966488,
+      "loaded": 9825000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 59.71760202724208,
+      "loaded": 10201506,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 8.539882543655539,
+      "loaded": 10103375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 61.381568822600684,
+      "loaded": 10485760,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 8.802861098484478,
+      "loaded": 10414500,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 63.072562624418914,
+      "loaded": 10774631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 9.065839653313416,
+      "loaded": 10725625,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 64.89382694860063,
+      "loaded": 11085756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 9.328818208142357,
+      "loaded": 11036750,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 66.81094728984453,
+      "loaded": 11413256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 9.619478716111182,
+      "loaded": 11380625,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 68.53635559696404,
+      "loaded": 11708006,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 9.827093364660344,
+      "loaded": 11626250,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 70.74104398939454,
+      "loaded": 12084631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 10.090071919489283,
+      "loaded": 11937375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 72.27474026238968,
+      "loaded": 12346631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 10.366891450888167,
+      "loaded": 12264875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 74.19186060363359,
+      "loaded": 12674131,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 10.699074888566825,
+      "loaded": 12657875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 76.10898094487749,
+      "loaded": 13001631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 11.003576373105597,
+      "loaded": 13018125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 77.83438925199701,
+      "loaded": 13296381,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 11.308077857644367,
+      "loaded": 13378375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 80.2307896785519,
+      "loaded": 13705756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 11.474169576483698,
+      "loaded": 13574875,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 82.243766036858,
+      "loaded": 14049631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 11.764830084452525,
+      "loaded": 13918750,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 82.72304612216898,
+      "loaded": 14131506,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 11.958603756431744,
+      "loaded": 14148000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 84.06503036103972,
+      "loaded": 14360756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 12.166218404980905,
+      "loaded": 14393625,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 85.59872663403483,
+      "loaded": 14622756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 12.40833110652095,
+      "loaded": 14680064,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 87.32413494115436,
+      "loaded": 14917506,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 12.664493561498894,
+      "loaded": 14983125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 89.04954324827388,
+      "loaded": 15212256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 12.844426256908168,
+      "loaded": 15196000,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 91.44594367482875,
+      "loaded": 15621631,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 13.218132624296661,
+      "loaded": 15638125,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 92.8837839307617,
+      "loaded": 15867256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 13.494952155695545,
+      "loaded": 15965625,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 95.47189639144096,
+      "loaded": 16309381,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 13.854817546514091,
+      "loaded": 16391375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 97.86829681799586,
+      "loaded": 16718756,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 14.145478054482918,
+      "loaded": 16735250,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 99.0185690227422,
+      "loaded": 16915256,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "tokenizer.json",
+      "progress": 100,
+      "loaded": 17082913,
+      "total": 17082913
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "done",
+      "file": "tokenizer.json"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 15.953568565526934,
+      "loaded": 18874368,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 17.287379735860238,
+      "loaded": 20452375,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 17.882541728367837,
+      "loaded": 21156500,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 18.67439857850508,
+      "loaded": 22093331,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 19.421811313282063,
+      "loaded": 22977581,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 20.224587954338823,
+      "loaded": 23927331,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 20.94431873597592,
+      "loaded": 24778831,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 21.629450879815305,
+      "loaded": 25589398,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 22.44606849744201,
+      "loaded": 26555523,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 23.124276349369275,
+      "loaded": 27357898,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 23.802484201296537,
+      "loaded": 28160273,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 24.512399934388277,
+      "loaded": 29000161,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 25.32901755201498,
+      "loaded": 29966286,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 26.104112239931855,
+      "loaded": 30883286,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 26.91270843052657,
+      "loaded": 31839921,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 27.632439212163668,
+      "loaded": 32691421,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 28.43521585322043,
+      "loaded": 33641171,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 29.09958272857775,
+      "loaded": 34427171,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 29.812419647319917,
+      "loaded": 35270515,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 30.850492890065727,
+      "loaded": 36498640,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 31.680951484262376,
+      "loaded": 37481140,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 32.41965391286817,
+      "loaded": 38355085,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 33.568454968173526,
+      "loaded": 39714210,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 34.26050379667074,
+      "loaded": 40532960,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 34.943426455761795,
+      "loaded": 41340913,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 35.7600440733885,
+      "loaded": 42307038,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 36.71507145671465,
+      "loaded": 43436913,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 37.47814161133784,
+      "loaded": 44339687,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 37.76880211930666,
+      "loaded": 44683562,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 39.775743721948565,
+      "loaded": 47057937,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 40.28204791275284,
+      "loaded": 47656936,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 41.48621287433798,
+      "loaded": 49081561,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 42.46892221080402,
+      "loaded": 50244186,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 43.38937377809534,
+      "loaded": 51333155,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 44.289037255141714,
+      "loaded": 52397530,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 45.26080397892534,
+      "loaded": 53547209,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 46.11894452626187,
+      "loaded": 54562459,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 46.92172116731864,
+      "loaded": 55512209,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 47.71065683180545,
+      "loaded": 56445584,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 48.3266373435752,
+      "loaded": 57174339,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 49.170936914341794,
+      "loaded": 58173214,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 50.01523648510838,
+      "loaded": 59172089,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 50.862434419762515,
+      "loaded": 60174393,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 51.76209789680888,
+      "loaded": 61238768,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 52.661761373855256,
+      "loaded": 62303143,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 53.25002950346792,
+      "loaded": 62999112,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 54.19121591022412,
+      "loaded": 64112612,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 54.897105715291275,
+      "loaded": 64947737,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 55.547631614078654,
+      "loaded": 65717362,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 56.39482954873277,
+      "loaded": 66719666,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 57.64051744002775,
+      "loaded": 68193416,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 58.58868138947615,
+      "loaded": 69315171,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 59.58523170251213,
+      "loaded": 70494171,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 60.77555568752733,
+      "loaded": 71902421,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 61.695976825801466,
+      "loaded": 72991354,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 62.87245983424672,
+      "loaded": 74383229,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 63.94114382303714,
+      "loaded": 75647569,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 64.5224648389748,
+      "loaded": 76335319,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 65.86503956625937,
+      "loaded": 77923694,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 66.81314265767341,
+      "loaded": 79045377,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 68.33565008036726,
+      "loaded": 80846627,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 69.63966870711823,
+      "loaded": 82389387,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 70.48396827788481,
+      "loaded": 83388262,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 71.72965616917979,
+      "loaded": 84862012,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 72.69159262990947,
+      "loaded": 86000061,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 73.79887075550499,
+      "loaded": 87310061,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 74.92295668684669,
+      "loaded": 88639946,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 75.87798407017283,
+      "loaded": 89769821,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 77.33816525840331,
+      "loaded": 91497334,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 78.39007947771906,
+      "loaded": 92741834,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 79.24822002505559,
+      "loaded": 93757084,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 80.34563745857997,
+      "loaded": 95055418,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 81.78512945087137,
+      "loaded": 96758454,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 83.09201601249266,
+      "loaded": 98304607,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 84.48995464605703,
+      "loaded": 99958482,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 85.89190399313738,
+      "loaded": 101617102,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 87.26216067356185,
+      "loaded": 103238227,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 88.63093647514965,
+      "loaded": 104857600,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 90.00853922747454,
+      "loaded": 106487416,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 91.28879532755003,
+      "loaded": 108002063,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 92.534483218845,
+      "loaded": 109475813,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 94.00672697664064,
+      "loaded": 111217597,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 94.67109385199795,
+      "loaded": 112003597,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 94.79566264112745,
+      "loaded": 112150972,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 96.5444013541386,
+      "loaded": 114219872,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 97.81777119857345,
+      "loaded": 115726372,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 99.0685289022328,
+      "loaded": 117206120,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 99.33150745706175,
+      "loaded": 117517245,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 99.80210066043983,
+      "loaded": 118073995,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "progress",
+      "file": "onnx/model_quantized.onnx",
+      "progress": 100,
+      "loaded": 118308126,
+      "total": 118308126
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "done",
+      "file": "onnx/model_quantized.onnx"
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "download",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "status": "ready",
+      "file": ""
+    },
+    {
+      "type": "ready",
+      "id": "cold-start",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "dtype": "q8",
+      "device": "wasm",
+      "local": true
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "inference",
+      "status": "running",
+      "completed": 0,
+      "total": 3
+    },
+    {
+      "type": "progress",
+      "id": "cold-start",
+      "stage": "inference",
+      "status": "running",
+      "completed": 3,
+      "total": 3
+    },
+    {
+      "type": "result",
+      "id": "cold-start",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "dtype": "q8",
+      "device": "wasm",
+      "local": true,
+      "scores": [
+        {
+          "id": "insalata",
+          "score": 0.8028425349192132
+        },
+        {
+          "id": "pastapomod",
+          "score": 0.730577090117147
+        },
+        {
+          "id": "bistecca",
+          "score": 0.6209449285055223
+        }
+      ],
+      "order": [
+        "insalata",
+        "pastapomod",
+        "bistecca"
+      ],
+      "timings": {
+        "initializationMs": 33106,
+        "inferenceMs": 219,
+        "totalMs": 33325,
+        "modelWasReady": false
+      }
+    },
+    {
+      "type": "ready",
+      "id": "offline-warm",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "dtype": "q8",
+      "device": "wasm",
+      "local": true
+    },
+    {
+      "type": "progress",
+      "id": "offline-warm",
+      "stage": "inference",
+      "status": "running",
+      "completed": 0,
+      "total": 3
+    },
+    {
+      "type": "progress",
+      "id": "offline-warm",
+      "stage": "inference",
+      "status": "running",
+      "completed": 3,
+      "total": 3
+    },
+    {
+      "type": "result",
+      "id": "offline-warm",
+      "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "dtype": "q8",
+      "device": "wasm",
+      "local": true,
+      "scores": [
+        {
+          "id": "bistecca",
+          "score": 0.761360611903087
+        },
+        {
+          "id": "pastapomod",
+          "score": 0.45007184549137935
+        },
+        {
+          "id": "insalata",
+          "score": 0.4028823846632344
+        }
+      ],
+      "order": [
+        "bistecca",
+        "pastapomod",
+        "insalata"
+      ],
+      "timings": {
+        "initializationMs": 0,
+        "inferenceMs": 123,
+        "totalMs": 123,
+        "modelWasReady": true
+      }
+    },
+    {
+      "type": "error",
+      "id": "invalid",
+      "code": "INVALID_INPUT",
+      "message": "Scrivi una richiesta pranzo fra 1 e 2000 caratteri.",
+      "detail": "Scrivi una richiesta pranzo fra 1 e 2000 caratteri.",
+      "stage": "validation",
+      "local": true,
+      "retryable": false
+    }
+  ],
+  "passed": true,
+  "finishedAt": "2026-09-19T10:26:14.272Z",
+  "elapsedMs": 34373
+}

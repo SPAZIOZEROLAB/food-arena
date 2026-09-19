@@ -1,0 +1,27 @@
+{
+  "passed": 15,
+  "checks": [
+    "merchant requires identity",
+    "signed merchant creates trial venue",
+    "menu persisted",
+    "anonymous customer publishes request",
+    "other customer cannot cancel",
+    "merchant publishes fitting quote",
+    "quantity held and pickup code hidden from merchant",
+    "last unit cannot be offered twice",
+    "shared request hides pickup code",
+    "other customer cannot accept",
+    "customer accepts one quote and gets code",
+    "accepted quote immutable to repeat accept/withdraw",
+    "wrong pickup code denied",
+    "pickup recorded with receipt commitment",
+    "duplicate pickup denied; stock deducted once"
+  ],
+  "requestId": "94d3e173-6e2e-4d3d-a4fd-7de484bf965d",
+  "offerId": "19e3ae11-642e-4bdb-9563-459b6e497444",
+  "receiptCommitment": "494f90143f15a3ced9013538006abf94f7a051740f9dd10f83073f0b0f776030",
+  "created": "2026-09-19T10:36:57.838Z",
+  "txHash": "0x6466fe21a10289f9e04e51c45afc7f61b9205fea0ed7d7601eb1bded2cd4e3d2",
+  "confirmed": true,
+  "signer": "0x6843815a47b57B66c12FfdC92a3E05279c444910"
+}

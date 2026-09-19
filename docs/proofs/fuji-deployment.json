@@ -1,0 +1,11 @@
+{
+  "chainId": 43113,
+  "rpc": "https://api.avax-test.network/ext/bc/C/rpc",
+  "contractName": "PickupRegistryFuji",
+  "address": "0xC423398Cb6208285f5B596b7d8b26A60748953c0",
+  "deploymentTx": "0x28690ea576672ac8c3b9de1be9d1b933eecd8da90995b6f57e0bd1f5379acdda",
+  "blockNumber": 58481711,
+  "merchant": "0x6843815a47b57B66c12FfdC92a3E05279c444910",
+  "explorer": "https://subnets-test.avax.network/c-chain/tx/0x28690ea576672ac8c3b9de1be9d1b933eecd8da90995b6f57e0bd1f5379acdda",
+  "testOnly": true
+}
