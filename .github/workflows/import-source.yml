@@ -51,7 +51,7 @@ jobs:
 
           root = pathlib.Path.cwd().resolve()
           archive = root / 'food-arena-source.zip'
-          expected = '598716663d84ba3ffcc98c34756f18de688e32bd2b28e64a1c47ba91e09fd1fb'
+          expected = '2b31f26ddb30a2994842af449c165fc9f6b9f72512de0d9fd7b5eb82856d649d'
           if hashlib.sha256(archive.read_bytes()).hexdigest() != expected:
               raise ValueError('Source archive SHA-256 mismatch')
           with zipfile.ZipFile(archive) as z:
